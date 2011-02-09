@@ -1,0 +1,192 @@
+
+
+html {
+    margin: 0;
+    padding-bottom: 50px;
+
+}
+
+a {
+	color: black; /** link color **/
+    text-decoration: none;
+    width:95%;
+}
+a:hover {
+	color:#8B0000; /** link color when mouse hovering over link **/
+    text-decoration: underline;
+    
+}
+
+
+body { 
+    background: #C8BBBE url(images/Sample15.jpg) repeat-x; 
+    color: #00FF00; /** background color of the entire page **/
+    text-align: center;
+	font: 11px verdana, arial, sans-serif;
+	padding-top: 20px;    /** adds space at top of page **/
+    padding-bottom: 890px;  /** adds space at bottom of page **/
+    
+}
+
+/** Function Definitions **/
+.resizeY {
+    width: 233px;
+    height : auto;
+}
+.resizeX {
+    width: auto;
+    height : 100px;
+}
+.warning_size {
+    width:60px;
+    height:auto;
+ }
+ .warning_size2 {
+    width:auto;
+    height:140px;
+  }
+
+/** LAYOUT **/
+
+#wrapper {
+    width: 950px;
+    color: black;
+    position: relative;
+    margin: auto;
+    text-align: center;
+
+ }
+ 
+/** Bar on top of page **/
+#header { 
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 925px;
+    height: 125px;
+    font:bold 1.2em/150% "Lucida Sans",Lucida Sans Unicode,Verdana,Helvetica,sans-serif;
+    background: center url(./images/wallpaper-626516.jpg) repeat-x;
+    
+}
+#header a {
+    color: white;
+    margin-right:10px;
+    font: 11px verdana,arial,sans-serif;
+ }
+#sign_up {
+    text-align:right; 
+    margin-right: 15px;
+ }
+#app_name {
+    text-align: left;
+    margin-left: 30px; 
+    color: white;
+    font:bold 1.2em/150% "Lucida Sans",Lucida Sans Unicode,Verdana,Helvetica,sans-serif;
+ }
+ #app_creators {
+    text-align:left;
+    margin-left: 30px;
+    color: WHITE;
+    font: 15px bold verdana, arial, sans-serif; }
+/** ------------------------------------------------ **/
+
+/** Shorter bar under header bar **/
+#nav_bar {
+    font: 1.5em/150% "Lucida Sans",Lucida Sans Unicode,Verdana,Helvetica,sans-serif;
+    position: absolute;
+    top: 125px;
+    left: 0px;
+    width: 925px;
+    height:50px;
+    background: #707070;
+    line-height:100%;
+    
+   
+ }
+#nav_bar p {
+    text-align: left;
+ }
+#vbar {
+    text-decoration:none;
+    color:black;
+ }
+#vbar a:hover {
+    color: black;
+  }
+#nav_bar a {
+    text-decoration:none; 
+    color: black;
+    margin-left: 30px;
+    margin-top:0px;
+ }
+#nav_bar a:hover {
+    color: #8B0000;
+ }
+ 
+/** ----------------------------------------- **/
+
+/** First sidebar on right **/
+#nav_panel {
+    position: absolute;
+    top: 165px;
+    left: 0px;
+    width: 200px;
+    height: 700px;
+    background: #B8B8B8 url(./images/t.jpg) repeat-y;
+ }
+
+#more {
+    text-align:left; 
+    margin: 25px;
+ }
+#nav_panel li {
+    text-align:left; 
+    margin-left:0px;
+    margin-top:5px;
+    margin-bottom:10px;
+ }
+/** -------------------------------------- **/
+
+/** Content of the page **/
+#content {
+    position:absolute;
+    top: 165px;
+    left: 200px;
+    width: 725px;
+    height: 700px;
+    background: #FFFFFF;
+   
+ }
+#content p {
+    padding-left:50px;
+    padding-right:50px;
+ }
+#content h1 {
+    margin-top: 45px;
+    margin-bottom: 25px; 
+}
+    
+#content img {
+    float: left;
+    margin-left: 50px;
+    margin-top: 0px;
+    align:right;
+    
+ }
+ 
+ #content p {
+     line-height: 1.5 em;
+     
+ 
+  }
+/** --------------------------------------------- **/
+
+/** Bar at foot of page **/
+#footer {
+    position: absolute;
+    top: 865px;
+    left: 0px;
+    width: 925px;
+    height: 75px;
+    background: #EAEAEA url(./images/image.jpg);
+ }
