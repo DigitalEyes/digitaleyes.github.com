@@ -17,25 +17,21 @@
 	<link href="./favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
 	<link href="favicon.ico" rel="SHORTCUT ICON" />
 	
-	<script type="text/javascript" src="/js/jquery.js"></script>
-	<script type="text/javascript" src="/js/jquery.dimensions.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript">
         $(document).ready(function() {
-                var $winwidth = $(window).width();
-                $("img.source-image").attr({
-                        width: $winwidth
+                $("img.source-image").hide();
+                var $source = $("img.source-image").attr("src");
+                $('#page-body').css({
+                        'backgroundImage': 'url(' + $source +')',
+                        'backgroundRepeat': 'no-repeat',
+                        'backgroundPosition': 'top center'
                 });
-                $(window).bind("resize", function(){
-                        var $winwidth = $(window).width();
-                        $("img.source-image").attr({
-                                width: $winwidth
-                        });
-                 });
         });
-	 </script>
+        </script>
 </head>
 
-<body>
+<body id = "page-body">
   <img class="source-image" src="images/digital_abstract_eye_2-wide.jpg" alt="" />
   <div id="wrapper">
   
