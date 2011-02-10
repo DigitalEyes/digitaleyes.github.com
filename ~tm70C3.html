@@ -19,14 +19,21 @@ a:hover {
 
 
 body { 
-    background: #C8BBBE url(images/Sample15.jpg) repeat-x; 
+    background: #C8BBBE url(images/crimson-rays-light-center.jpg) repeat; 
+
     color: #00FF00; /** background color of the entire page **/
     text-align: center;
 	font: 11px verdana, arial, sans-serif;
 	padding-top: 20px;    /** adds space at top of page **/
     padding-bottom: 890px;  /** adds space at bottom of page **/
-    
+
 }
+#img.source-image {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+ }
 
 /** Function Definitions **/
 .resizeY {
@@ -65,8 +72,8 @@ body {
     width: 463px;
     height: 125px;
     font:bold 1.2em/150% "Lucida Sans",Lucida Sans Unicode,Verdana,Helvetica,sans-serif;
-    background: left url("./images/font option #2.png") no-repeat;
-    
+    background: url("./images/logo23.png") no-repeat;
+    background-position: left top;
 }
 #headerA a {
     color: white;
@@ -109,19 +116,23 @@ body {
 
 /** Shorter bar under header bar **/
 #nav_bar {
-    font: 1.5em/150% "Lucida Sans",Lucida Sans Unicode,Verdana,Helvetica,sans-serif;
+    font: bold 1.6em/150% "Lucida Sans",Lucida Sans Unicode,Verdana,Helvetica,sans-serif;
+    background: #B8B8B8 url(./images/grey_grad.png) repeat-x;
     position: absolute;
     top: 125px;
     left: 0px;
     width: 925px;
     height:50px;
-    background: #707070;
     line-height:100%;
+    
+    
     
    
  }
 #nav_bar p {
     text-align: left;
+    margin-bottom:30px;
+    margin-left:10px;
  }
 #vbar {
     text-decoration:none;
@@ -133,8 +144,8 @@ body {
 #nav_bar a {
     text-decoration:none; 
     color: black;
-    margin-left: 30px;
-    margin-top:0px;
+    margin-left: 27px; /**controls spacing of links **/
+    margin-top:0px;  
  }
 #nav_bar a:hover {
     color: #8B0000;
@@ -145,11 +156,11 @@ body {
 /** First sidebar on right **/
 #nav_panel {
     position: absolute;
-    top: 165px;
+    top: 175px;
     left: 0px;
     width: 200px;
     height: 700px;
-    background: #B8B8B8 url(./images/t.jpg) repeat-y;
+    background: #B8B8B8;
  }
 
 #more {
@@ -206,4 +217,9 @@ body {
     width: 925px;
     height: 75px;
     background: #EAEAEA url(./images/image.jpg);
+ }
+#footer img
+{
+    width: 50px;
+    height : auto;
  }

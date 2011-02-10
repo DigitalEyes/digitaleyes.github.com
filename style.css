@@ -116,19 +116,23 @@ body {
 
 /** Shorter bar under header bar **/
 #nav_bar {
-    font: 1.5em/150% "Lucida Sans",Lucida Sans Unicode,Verdana,Helvetica,sans-serif;
+    font: bold 1.6em/150% "Lucida Sans",Lucida Sans Unicode,Verdana,Helvetica,sans-serif;
+    background: #B8B8B8 url(./images/grey_grad.png) repeat-x;
     position: absolute;
     top: 125px;
     left: 0px;
     width: 925px;
     height:50px;
-    background: #707070;
     line-height:100%;
+    
+    
     
    
  }
 #nav_bar p {
     text-align: left;
+    margin-bottom:30px;
+    margin-left:10px;
  }
 #vbar {
     text-decoration:none;
@@ -140,8 +144,8 @@ body {
 #nav_bar a {
     text-decoration:none; 
     color: black;
-    margin-left: 30px;
-    margin-top:0px;
+    margin-left: 27px; /**controls spacing of links **/
+    margin-top:0px;  
  }
 #nav_bar a:hover {
     color: #8B0000;
@@ -152,11 +156,11 @@ body {
 /** First sidebar on right **/
 #nav_panel {
     position: absolute;
-    top: 165px;
+    top: 166px;
     left: 0px;
     width: 200px;
     height: 700px;
-    background: #B8B8B8 url(./images/t.jpg) repeat-y;
+    background: #B8B8B8;
  }
 
 #more {
@@ -174,7 +178,7 @@ body {
 /** Content of the page **/
 #content {
     position:absolute;
-    top: 165px;
+    top: 175px;
     left: 200px;
     width: 725px;
     height: 700px;
@@ -218,4 +222,4 @@ body {
 {
     width: 50px;
     height : auto;
-     }
+ }
