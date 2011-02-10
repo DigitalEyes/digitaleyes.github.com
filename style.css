@@ -19,7 +19,7 @@ a:hover {
 
 
 body { 
-    background: #C8BBBE url(images/background.jpg) repeat-x repeat-y; 
+    background: #C8BBBE url(images/24535-fullsize.jpg) repeat; 
 
     color: #00FF00; /** background color of the entire page **/
     text-align: center;
@@ -72,8 +72,8 @@ body {
     width: 463px;
     height: 125px;
     font:bold 1.2em/150% "Lucida Sans",Lucida Sans Unicode,Verdana,Helvetica,sans-serif;
-    background: url("./images/font option #2.png") no-repeat;
-    background-position: 50% 50%;
+    background: url("./images/logo23.png") no-repeat;
+    background-position: left top;
 }
 #headerA a {
     color: white;
@@ -214,3 +214,8 @@ body {
     height: 75px;
     background: #EAEAEA url(./images/image.jpg);
  }
+#footer img
+{
+    width: 50px;
+    height : auto;
+     }
