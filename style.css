@@ -19,7 +19,7 @@ a:hover {
 
 
 body { 
-    /*background: #C8BBBE url(images/digital_abstract_eye_2-wide.jpg) repeat-x repeat-y; */
+    background: #C8BBBE url(images/background.jpg) repeat-x repeat-y; 
 
     color: #00FF00; /** background color of the entire page **/
     text-align: center;
