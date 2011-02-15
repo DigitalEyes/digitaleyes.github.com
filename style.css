@@ -44,6 +44,10 @@ body {
     width: auto;
     height : 100px;
 }
+.resizeLarge {
+    height:auto;
+    width:450px;
+ }
 .warning_size {
     width:60px;
     height:auto;
@@ -204,38 +208,34 @@ body {
 #content p {
     padding-left:50px;
     padding-right:50px;
+    line-height: 1.5 em;
  }
 #content h1 {
     margin-top: 45px;
     margin-bottom: 25px; 
 }
     
-#content img {
-    float: left;
+ .center-img
+ {
+    float:center;
+    padding:30px;
+ 
+  }
+ .left-img
+{
+   float: left;
     margin-left: 50px;
     margin-top: 0px;
     align:right;
-    
+
  }
- #index-pg 
- {
-     float:right;
-     border:none;
-     margin-top:300px;
-     padding-left: 134px;
-     padding-top: 40px;
-  }
- #ss 
- {
-     border: none;
-     float: center;
-     align: center;
-  }
- #content p {
-     line-height: 1.5 em;
-     
+ .right-img
+ { 
+    float:right;
+    padding:50px;
  
   }
+
 /** --------------------------------------------- **/
 
 /** Bar at foot of page **/
