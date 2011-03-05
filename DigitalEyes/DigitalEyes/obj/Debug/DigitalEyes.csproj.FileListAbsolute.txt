@@ -1,0 +1,17 @@
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\Bin\Debug\ApplicationIcon.png
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\Bin\Debug\Background.png
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\Bin\Debug\DigitalEyes.dll
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\Bin\Debug\DigitalEyes.pdb
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\Bin\Debug\AppManifest.xaml
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\Bin\Debug\DigitalEyes.xap
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\obj\Debug\App.g.i.cs
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\obj\Debug\MainPage.g.i.cs
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\obj\Debug\DigitalEyes.g.resources
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\obj\Debug\DigitalEyes.dll
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\obj\Debug\DigitalEyes.pdb
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\obj\Debug\XapCacheFile.xml
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\obj\Debug\Scan.g.i.cs
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\obj\Debug\Directions.g.i.cs
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\obj\Debug\Settings.g.i.cs
+C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\obj\Debug\Location.g.i.cs
