@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
 
 namespace DigitalEyes
 {
@@ -20,6 +21,24 @@ namespace DigitalEyes
             InitializeComponent();
         }
 
+        PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
+
+       
+
+        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            object FontSizeObject;
+
+            if (phoneAppService.State.ContainsKey("LargeFontSize"))
+            {
+                if (phoneAppService.State.TryGetValue("LargeFontSize", out FontSizeObject))
+                {
+                    double largeFontSize = Convert.ToDouble(FontSizeObject);
+                    textBlock1.FontSize = largeFontSize;
+                    PageTitle.FontSize = largeFontSize;
+                }
+            }
+        }
         private void BackgroundColorButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/BackgroundColor.xaml", UriKind.RelativeOrAbsolute));
@@ -49,6 +68,22 @@ namespace DigitalEyes
                 )
             );
         }
+
+        private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (scaleSlider != null)
+            {
+                phoneAppService.State["LargeFontSize"] = scaleSlider.Value;
+                textBlock1.FontSize = scaleSlider.Value;
+                textBlock2.FontSize = (scaleSlider.Value - 10);
+            }
+        }
+
+        private void DigitalEyes_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+        
 
        
     }
