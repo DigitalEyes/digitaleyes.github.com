@@ -19,5 +19,37 @@ namespace DigitalEyes
         {
             InitializeComponent();
         }
+
+        private void BackgroundColorButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/BackgroundColor.xaml", UriKind.RelativeOrAbsolute));
+            
+
+        }
+
+        private void TextColorButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/FontColor.xaml", UriKind.RelativeOrAbsolute));
+
+        }
+
+        private void FontSizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/FontSize.xaml", UriKind.RelativeOrAbsolute));
+
+        }
+        public static SolidColorBrush GetColorFromHexa(string hexaColor)
+        {
+            return new SolidColorBrush(
+                Color.FromArgb(
+                    Convert.ToByte(hexaColor.Substring(1, 2), 16),
+                    Convert.ToByte(hexaColor.Substring(3, 2), 16),
+                    Convert.ToByte(hexaColor.Substring(5, 2), 16),
+                    Convert.ToByte(hexaColor.Substring(7, 2), 16)
+                )
+            );
+        }
+
+       
     }
 }

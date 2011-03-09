@@ -11,7 +11,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Name="DigitalEyes">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -23,23 +23,34 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle" Text="DIGITAL EYES" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="settings" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="SettingsPage" Text="settings" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0" Background="Black">
+            <Button Content="Background Color" Height="72" HorizontalAlignment="Center" Margin="90,69,86,0" Name="BackgroundColorButton" VerticalAlignment="Top" Width="280" Click="BackgroundColorButton_Click" />
+            <Button Content="Text Color" Height="72" HorizontalAlignment="Center" Margin="90,218,86,0" Name="TextColorButton" VerticalAlignment="Top" Width="280" Click="TextColorButton_Click" />
+            <Button Content="Font Size" Height="72" HorizontalAlignment="Left" Margin="90,368,0,0" Name="FontSizeButton" VerticalAlignment="Top" Width="280" Click="FontSizeButton_Click" />
+        </Grid>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
-                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="False" IsMenuEnabled="True" x:Name="Menu">
+            <!--<shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Black"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="White"/> -->
+            <shell:ApplicationBar.MenuItems> 
+                <shell:ApplicationBarMenuItem Text="Red"/>
+                <shell:ApplicationBarMenuItem Text="Blue"/>
+                <shell:ApplicationBarMenuItem Text="Green"/>
+                <shell:ApplicationBarMenuItem Text="Bright Green"/>
+                <shell:ApplicationBarMenuItem Text="Yellow"/>
+                <shell:ApplicationBarMenuItem Text="Purple"/>
+                <shell:ApplicationBarMenuItem Text="Pink"/>
+                <shell:ApplicationBarMenuItem Text="Crimson"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
+    </phone:PhoneApplicationPage.ApplicationBar>
+    
 
 </phone:PhoneApplicationPage>

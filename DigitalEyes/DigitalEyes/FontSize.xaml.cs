@@ -13,25 +13,27 @@ using Microsoft.Phone.Controls;
 
 namespace DigitalEyes
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class FontSize : PhoneApplicationPage
     {
-        // Constructor
-        public MainPage()
+        public FontSize()
         {
             InitializeComponent();
         }
 
-        private void hyperlinkButton3_Click(object sender, RoutedEventArgs e)
+        private void button4_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void hyperlinkButton2_Click(object sender, RoutedEventArgs e)
+        private void button1_Click(object sender, RoutedEventArgs e)
         {
 
         }
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
 
-        private void hyperlinkButton1_Click(object sender, RoutedEventArgs e)
+        }
+        private void button3_Click(object sender, RoutedEventArgs e)
         {
 
         }

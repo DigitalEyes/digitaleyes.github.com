@@ -15,3 +15,23 @@ C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes
 C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\obj\Debug\Directions.g.i.cs
 C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\obj\Debug\Settings.g.i.cs
 C:\Users\Elizabeth\Documents\Visual Studio 2010\Projects\DigitalEyes\DigitalEyes\obj\Debug\Location.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\Bin\Debug\ApplicationIcon.png
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\Bin\Debug\Background.png
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\Bin\Debug\DigitalEyes.dll
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\Bin\Debug\DigitalEyes.pdb
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\Bin\Debug\AppManifest.xaml
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\Bin\Debug\DigitalEyes.xap
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\ResolveAssemblyReference.cache
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\App.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\Directions.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\Location.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\MainPage.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\Scan.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\Settings.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\DigitalEyes.g.resources
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\DigitalEyes.dll
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\DigitalEyes.pdb
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\XapCacheFile.xml
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\BackgroundColor.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\FontColor.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\FontSize.g.i.cs
