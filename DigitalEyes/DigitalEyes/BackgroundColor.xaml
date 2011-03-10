@@ -11,7 +11,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -42,11 +42,32 @@
             <Rectangle Fill="#FF780000" Height="70" HorizontalAlignment="Left" Margin="42,46,0,0" Name="rectangle12" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
             <Rectangle Fill="#FF96D6E9" Height="70" HorizontalAlignment="Left" Margin="360,261,0,0" Name="rectangle13" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
             <Rectangle Fill="#FF580079" Height="70" HorizontalAlignment="Left" Margin="42,379,0,0" Name="rectangle14" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="Purple" Height="70" HorizontalAlignment="Left" Margin="143,379,0,0" Name="rectangle15" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
             <Rectangle Fill="White" Height="70" HorizontalAlignment="Left" Margin="143,492,0,0" Name="rectangle16" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="Purple" Height="70" HorizontalAlignment="Left" Margin="143,379,0,0" Name="rectangle15" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
             <Rectangle Fill="Black" Height="70" HorizontalAlignment="Left" Margin="248,492,0,0" Name="rectangle17" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
             <Rectangle Fill="#FFA6488D" Height="70" HorizontalAlignment="Left" Margin="248,379,0,0" Name="rectangle18" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
             <Rectangle Fill="#FFA670A3" Height="70" HorizontalAlignment="Left" Margin="360,379,0,0" Name="rectangle19" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="Black" Height="70" HorizontalAlignment="Left" Margin="360,492,0,0" Name="rectangle20" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="42,46,0,0" Name="button1" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="42,492,0,0" Name="button2" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="360,377,0,0" Name="button3" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="248,377,0,0" Name="button4" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="143,377,0,0" Name="button5" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="42,377,0,0" Name="button6" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="360,259,0,0" Name="button7" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="248,259,0,0" Name="button8" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="143,259,0,0" Name="button9" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="42,259,0,0" Name="button10" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="360,153,0,0" Name="button11" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="248,151,0,0" Name="button12" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="143,153,0,0" Name="button13" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="42,153,0,0" Name="button14" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="360,46,0,0" Name="button15" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="248,46,0,0" Name="button16" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="143,46,0,0" Name="button17" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="360,492,0,0" Name="button18" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="248,490,0,0" Name="button19" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="143,490,0,0" Name="button20" VerticalAlignment="Top" Width="70" Foreground="White" BorderBrush="Black" />
         </Grid>
     </Grid>
  

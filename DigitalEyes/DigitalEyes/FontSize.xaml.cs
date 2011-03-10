@@ -10,6 +10,9 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
+using Microsoft.Xna.Framework.Audio;
+using System.IO;
 
 namespace DigitalEyes
 {
@@ -19,7 +22,7 @@ namespace DigitalEyes
         {
             InitializeComponent();
         }
-
+        PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
         private void button4_Click(object sender, RoutedEventArgs e)
         {
 

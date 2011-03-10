@@ -11,6 +11,8 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Microsoft.Xna.Framework.Audio;
+using System.IO;
 
 namespace DigitalEyes
 {
@@ -21,9 +23,8 @@ namespace DigitalEyes
             InitializeComponent();
         }
 
+/****************************CHANGE FONT SIZE DYNAMICALLY ****************************************/
         PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
-
-       
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
@@ -34,11 +35,50 @@ namespace DigitalEyes
                 if (phoneAppService.State.TryGetValue("LargeFontSize", out FontSizeObject))
                 {
                     double largeFontSize = Convert.ToDouble(FontSizeObject);
-                    textBlock1.FontSize = largeFontSize;
                     PageTitle.FontSize = largeFontSize;
                 }
             }
+            if (phoneAppService.State.ContainsKey("MediumFontSize"))
+            {
+                if (phoneAppService.State.TryGetValue("MediumFontSize", out FontSizeObject))
+                {
+                    double mediumFontSize = Convert.ToDouble(FontSizeObject);
+
+                    ApplicationTitle.FontSize = mediumFontSize;
+                    textBlock1.FontSize = mediumFontSize;
+                    BackgroundColorButton.FontSize = mediumFontSize;
+                    TextColorButton.FontSize = mediumFontSize;
+
+                    if (mediumFontSize < 23)
+                    {
+                        BackgroundColorButton.Height = mediumFontSize * 4;
+                        TextColorButton.Height = mediumFontSize * 4;
+
+                    }
+                    else if (mediumFontSize < 30)
+                    {
+                        BackgroundColorButton.Height = mediumFontSize * 3;
+                        TextColorButton.Height = mediumFontSize * 3;
+                    }
+                    else
+                    {
+                        BackgroundColorButton.Height = mediumFontSize * 2.5;
+                        TextColorButton.Height = mediumFontSize * 2.5;
+                    }
+                    
+                }
+            }
+            if (phoneAppService.State.ContainsKey("SmallFontSize"))
+            {
+                if (phoneAppService.State.TryGetValue("SmallFontSize", out FontSizeObject))
+                {
+                    double smallFontSize = Convert.ToDouble(FontSizeObject);
+
+                    textBlock2.FontSize = smallFontSize;
+                }
+            }
         }
+/**********************************END CHANGE FONT SIZE DYNAMICALLY ******************************/
         private void BackgroundColorButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/BackgroundColor.xaml", UriKind.RelativeOrAbsolute));
@@ -52,11 +92,7 @@ namespace DigitalEyes
 
         }
 
-        private void FontSizeButton_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/FontSize.xaml", UriKind.RelativeOrAbsolute));
-
-        }
+       
         public static SolidColorBrush GetColorFromHexa(string hexaColor)
         {
             return new SolidColorBrush(
@@ -73,9 +109,37 @@ namespace DigitalEyes
         {
             if (scaleSlider != null)
             {
-                phoneAppService.State["LargeFontSize"] = scaleSlider.Value;
-                textBlock1.FontSize = scaleSlider.Value;
-                textBlock2.FontSize = (scaleSlider.Value - 10);
+                phoneAppService.State["LargeFontSize"] = scaleSlider.Value*2;
+                phoneAppService.State["MediumFontSize"] = (scaleSlider.Value / 3) * 2 * 2;
+                phoneAppService.State["SmallFontSize"] = (scaleSlider.Value / 3) *2;
+
+                double smallFontSize = (scaleSlider.Value / 3) * 2;
+                double mediumFontSize = (scaleSlider.Value / 3) * 2 * 2;
+                double largeFontSize = (scaleSlider.Value) * 2 * 2;
+
+                ApplicationTitle.FontSize = mediumFontSize;
+                PageTitle.FontSize = largeFontSize; 
+                textBlock1.FontSize = mediumFontSize; 
+                textBlock2.FontSize = smallFontSize; 
+                BackgroundColorButton.FontSize = mediumFontSize;
+                TextColorButton.FontSize = mediumFontSize;
+
+                if (mediumFontSize < 23)
+                {
+                    BackgroundColorButton.Height = mediumFontSize * 4;
+                    TextColorButton.Height = mediumFontSize * 4;
+
+                }
+                else if (mediumFontSize < 30)
+                {
+                    BackgroundColorButton.Height = mediumFontSize * 3;
+                    TextColorButton.Height = mediumFontSize * 3;
+                }
+                else
+                {
+                    BackgroundColorButton.Height = mediumFontSize * 2.5;
+                    TextColorButton.Height = mediumFontSize * 2.5;
+                }
             }
         }
 
@@ -83,7 +147,8 @@ namespace DigitalEyes
         {
 
         }
-        
+
+       
 
        
     }

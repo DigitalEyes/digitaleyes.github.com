@@ -42,6 +42,7 @@ namespace DigitalEyes
 
         }
 
+/****************************CHANGE FONT SIZE DYNAMICALLY ****************************************/
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
             object FontSizeObject;
@@ -51,12 +52,68 @@ namespace DigitalEyes
                 if (phoneAppService.State.TryGetValue("LargeFontSize", out FontSizeObject))
                 {
                     double largeFontSize = Convert.ToDouble(FontSizeObject);
-                    hyperlinkButton1.FontSize = largeFontSize;
-                    hyperlinkButton2.FontSize = largeFontSize;
-                    hyperlinkButton3.FontSize = largeFontSize;
                     PageTitle.FontSize = largeFontSize;
                 }
             }
+            if (phoneAppService.State.ContainsKey("MediumFontSize"))
+            {
+                if (phoneAppService.State.TryGetValue("MediumFontSize", out FontSizeObject))
+                {
+                    double mediumFontSize = Convert.ToDouble(FontSizeObject);
+                   
+                    button1.FontSize = mediumFontSize;
+                    button2.FontSize = mediumFontSize;
+                    button3.FontSize = mediumFontSize;
+
+                    if (mediumFontSize < 23)
+                    {
+                        button1.Height = mediumFontSize * 4;
+                        button2.Height = mediumFontSize * 4;
+                        button3.Height = mediumFontSize * 4;
+
+                    }
+                    else if (mediumFontSize < 30)
+                    {
+                        button1.Height = mediumFontSize * 3;
+                        button2.Height = mediumFontSize * 3;
+                        button3.Height = mediumFontSize * 3;
+                    }
+                    else
+                    {
+                        button1.Height = mediumFontSize * 2.5;
+                        button2.Height = mediumFontSize * 2.5;
+                        button3.Height = mediumFontSize * 2.5;
+                    }
+                }
+            }
+            if (phoneAppService.State.ContainsKey("SmallFontSize"))
+            {
+                if (phoneAppService.State.TryGetValue("SmallFontSize", out FontSizeObject))
+                {
+                    double smallFontSize = Convert.ToDouble(FontSizeObject);
+
+                }
+            }
+
+        }
+/**********************************END CHANGE FONT SIZE DYNAMICALLY ******************************/
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Scan.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Directions.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Settings.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void button1_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
 
         }
         

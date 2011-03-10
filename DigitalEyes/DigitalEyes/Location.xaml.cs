@@ -10,6 +10,9 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
+using Microsoft.Xna.Framework.Audio;
+using System.IO;
 
 namespace DigitalEyes
 {
@@ -18,6 +21,25 @@ namespace DigitalEyes
         public Location()
         {
             InitializeComponent();
+        }
+        PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
+
+        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            object FontSizeObject;
+
+            if (phoneAppService.State.ContainsKey("LargeFontSize"))
+            {
+                if (phoneAppService.State.TryGetValue("LargeFontSize", out FontSizeObject))
+                {
+                    double largeFontSize = Convert.ToDouble(FontSizeObject);
+                    //hyperlinkButton1.FontSize = largeFontSize;
+                    // hyperlinkButton2.FontSize = largeFontSize;
+                    // hyperlinkButton3.FontSize = largeFontSize;
+                    PageTitle.FontSize = largeFontSize;
+                }
+            }
+
         }
     }
 }
