@@ -29,7 +29,7 @@ namespace DigitalEyes
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
             object FontSizeObject;
-
+            object BGC;
             if (phoneAppService.State.ContainsKey("LargeFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("LargeFontSize", out FontSizeObject))
@@ -45,7 +45,7 @@ namespace DigitalEyes
                 {
                     double mediumFontSize = Convert.ToDouble(FontSizeObject);
 
-                    ApplicationTitle.FontSize = mediumFontSize;
+                    
                 }
             }
             if (phoneAppService.State.ContainsKey("SmallFontSize"))
@@ -53,21 +53,44 @@ namespace DigitalEyes
                 if (phoneAppService.State.TryGetValue("SmallFontSize", out FontSizeObject))
                 {
                     double smallFontSize = Convert.ToDouble(FontSizeObject);
+                    ApplicationTitle.FontSize = smallFontSize;
+                }
+            }
+            if (phoneAppService.State.ContainsKey("BackgroundColor"))
+            {
+                if (phoneAppService.State.TryGetValue("BackgroundColor", out BGC))
+                {
+                    string col = Convert.ToString(BGC);
+                    LayoutRoot.Background = new SolidColorBrush(GetColorFromHex(col).Color);
+
+
                 }
             }
 
         }
 /**********************************END CHANGE FONT SIZE DYNAMICALLY ******************************/
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+       
         private void PhoneApplicationPage_Loaded_1(object sender, RoutedEventArgs e)
         {
 
         }
 
+        private void b_red1_Click_1(object sender, RoutedEventArgs e)
+        {
+            LayoutRoot.Background = new SolidColorBrush(GetColorFromHex("#FF780000").Color);
+        }
+        private SolidColorBrush GetColorFromHex(string myColor)
+        {
+            return new SolidColorBrush(
+                Color.FromArgb(
+                    Convert.ToByte(myColor.Substring(1,2),16),
+                    Convert.ToByte(myColor.Substring(3,2),16),
+                    Convert.ToByte(myColor.Substring(5,2),16),
+                    Convert.ToByte(myColor.Substring(7,2),16)
+                )
+            );
+        }
+       
         
         
     }

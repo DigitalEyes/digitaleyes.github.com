@@ -29,7 +29,7 @@ namespace DigitalEyes
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
             object FontSizeObject;
-
+            object BGC;
             if (phoneAppService.State.ContainsKey("LargeFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("LargeFontSize", out FontSizeObject))
@@ -44,7 +44,7 @@ namespace DigitalEyes
                 {
                     double mediumFontSize = Convert.ToDouble(FontSizeObject);
 
-                    ApplicationTitle.FontSize = mediumFontSize;
+                    
                     textBlock1.FontSize = mediumFontSize;
                     BackgroundColorButton.FontSize = mediumFontSize;
                     TextColorButton.FontSize = mediumFontSize;
@@ -73,8 +73,18 @@ namespace DigitalEyes
                 if (phoneAppService.State.TryGetValue("SmallFontSize", out FontSizeObject))
                 {
                     double smallFontSize = Convert.ToDouble(FontSizeObject);
-
+                    ApplicationTitle.FontSize = smallFontSize;
                     textBlock2.FontSize = smallFontSize;
+                }
+            }
+            if (phoneAppService.State.ContainsKey("BackgroundColor"))
+            {
+                if (phoneAppService.State.TryGetValue("BackgroundColor", out BGC))
+                {
+                    string col = Convert.ToString(BGC);
+                    LayoutRoot.Background = new SolidColorBrush(GetColorFromHex(col).Color);
+
+
                 }
             }
         }
@@ -82,18 +92,15 @@ namespace DigitalEyes
         private void BackgroundColorButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/BackgroundColor.xaml", UriKind.RelativeOrAbsolute));
-            
-
         }
 
         private void TextColorButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/FontColor.xaml", UriKind.RelativeOrAbsolute));
-
         }
 
        
-        public static SolidColorBrush GetColorFromHexa(string hexaColor)
+        public static SolidColorBrush GetColorFromHexa(string hexaColor) //does not work 
         {
             return new SolidColorBrush(
                 Color.FromArgb(
@@ -109,15 +116,17 @@ namespace DigitalEyes
         {
             if (scaleSlider != null)
             {
-                phoneAppService.State["LargeFontSize"] = scaleSlider.Value*2;
-                phoneAppService.State["MediumFontSize"] = (scaleSlider.Value / 3) * 2 * 2;
-                phoneAppService.State["SmallFontSize"] = (scaleSlider.Value / 3) *2;
+                double smallFontSize = ((scaleSlider.Value / 4) * 1) * 2;
+                double mediumFontSize = ((scaleSlider.Value / 4) * 2) * 2;
+                double largeFontSize = ((scaleSlider.Value / 4) * 4) * 2;
 
-                double smallFontSize = (scaleSlider.Value / 3) * 2;
-                double mediumFontSize = (scaleSlider.Value / 3) * 2 * 2;
-                double largeFontSize = (scaleSlider.Value) * 2 * 2;
+                phoneAppService.State["LargeFontSize"] = largeFontSize;
+                phoneAppService.State["MediumFontSize"] = mediumFontSize;
+                phoneAppService.State["SmallFontSize"] = smallFontSize;
 
-                ApplicationTitle.FontSize = mediumFontSize;
+                
+
+                ApplicationTitle.FontSize = smallFontSize;
                 PageTitle.FontSize = largeFontSize; 
                 textBlock1.FontSize = mediumFontSize; 
                 textBlock2.FontSize = smallFontSize; 
@@ -148,7 +157,17 @@ namespace DigitalEyes
 
         }
 
-       
+        private SolidColorBrush GetColorFromHex(string myColor)
+        {
+            return new SolidColorBrush(
+                Color.FromArgb(
+                    Convert.ToByte(myColor.Substring(1, 2), 16),
+                    Convert.ToByte(myColor.Substring(3, 2), 16),
+                    Convert.ToByte(myColor.Substring(5, 2), 16),
+                    Convert.ToByte(myColor.Substring(7, 2), 16)
+                )
+            );
+        }
 
        
     }

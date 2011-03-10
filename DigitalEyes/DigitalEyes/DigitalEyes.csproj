@@ -70,9 +70,6 @@
     <Compile Include="FontColor.xaml.cs">
       <DependentUpon>FontColor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FontSize.xaml.cs">
-      <DependentUpon>FontSize.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Location.xaml.cs">
       <DependentUpon>Location.xaml</DependentUpon>
     </Compile>
@@ -101,10 +98,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FontColor.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="FontSize.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

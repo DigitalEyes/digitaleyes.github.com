@@ -29,7 +29,7 @@ namespace DigitalEyes
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
             object FontSizeObject;
-
+            object BGC;
             if (phoneAppService.State.ContainsKey("LargeFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("LargeFontSize", out FontSizeObject))
@@ -44,7 +44,7 @@ namespace DigitalEyes
                 {
                     double mediumFontSize = Convert.ToDouble(FontSizeObject);
 
-                    ApplicationTitle.FontSize = mediumFontSize;
+                    
                     textBox1.FontSize = mediumFontSize;
                     button1.FontSize = mediumFontSize;
                     button2.FontSize = mediumFontSize;
@@ -53,17 +53,20 @@ namespace DigitalEyes
                     {
                         button1.Height = mediumFontSize * 4;
                         button2.Height = mediumFontSize * 4;
+                        textBox1.Height = mediumFontSize * 4;
 
                     }
                     else if (mediumFontSize < 30)
                     {
                         button1.Height = mediumFontSize * 3;
                         button2.Height = mediumFontSize * 3;
+                        textBox1.Height = mediumFontSize * 3;
                     }
                     else
                     {
                         button1.Height = mediumFontSize * 2.5;
                         button2.Height = mediumFontSize * 2.5;
+                        textBox1.Height = mediumFontSize * 2.5;
                     }
 
                 }
@@ -76,13 +79,34 @@ namespace DigitalEyes
 
                     textBlock1.FontSize = smallFontSize;
                     hyperlinkButton1.FontSize = smallFontSize;
+                    ApplicationTitle.FontSize = smallFontSize;
+
+                }
+            }
+            if (phoneAppService.State.ContainsKey("BackgroundColor"))
+            {
+                if (phoneAppService.State.TryGetValue("BackgroundColor", out BGC))
+                {
+                    string col = Convert.ToString(BGC);
+                    LayoutRoot.Background = new SolidColorBrush(GetColorFromHex(col).Color);
+
 
                 }
             }
 
         }
 /**********************************END CHANGE FONT SIZE DYNAMICALLY ******************************/
-        
+        private SolidColorBrush GetColorFromHex(string myColor)
+        {
+            return new SolidColorBrush(
+                Color.FromArgb(
+                    Convert.ToByte(myColor.Substring(1, 2), 16),
+                    Convert.ToByte(myColor.Substring(3, 2), 16),
+                    Convert.ToByte(myColor.Substring(5, 2), 16),
+                    Convert.ToByte(myColor.Substring(7, 2), 16)
+                )
+            );
+        }
 
     }
 }

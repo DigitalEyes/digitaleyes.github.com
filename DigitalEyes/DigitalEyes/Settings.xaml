@@ -22,17 +22,17 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="DIGITAL EYES" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="settings" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="ApplicationTitle" Text="DIGITAL EYES" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="NoWrap" />
+            <TextBlock x:Name="PageTitle" Text="settings" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" TextWrapping="NoWrap" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0">
-            <Button Content="Background Color" Height="72" HorizontalAlignment="Center" Margin="12,234,6,0" Name="BackgroundColorButton" VerticalAlignment="Top" Width="438" Click="BackgroundColorButton_Click" />
+            <Button Content="Background Color" Height="72" HorizontalAlignment="Center" Margin="12,253,6,0" Name="BackgroundColorButton" VerticalAlignment="Top" Width="438" Click="BackgroundColorButton_Click" />
             <Button Content="Text Color" Height="72" HorizontalAlignment="Center" Margin="12,370,6,0" Name="TextColorButton" VerticalAlignment="Top" Width="438" Click="TextColorButton_Click" />
-            <Slider x:Name="scaleSlider" Height="80" Minimum="10" Maximum="50" SmallChange="2" HorizontalAlignment="Left" Margin="5,100,0,0" VerticalAlignment="Top" Width="450" ValueChanged="slider1_ValueChanged" />
-            <TextBlock Height="60" HorizontalAlignment="Left" FontSize="30" Margin="5,20,0,0" Name="textBlock1" Text="Font Size" VerticalAlignment="Top" />
-            <TextBlock Height="60" HorizontalAlignment="Left" FontSize="20" Margin="5,60,0,0" Name="textBlock2" Text="(drag finger along slider to adjust)" VerticalAlignment="Top" />
+            <Slider x:Name="scaleSlider" Height="80" Minimum="10" Maximum="50" SmallChange="2" HorizontalAlignment="Left" Margin="5,149,0,0" VerticalAlignment="Top" Width="450" ValueChanged="slider1_ValueChanged" Padding="0,5,0,0" />
+            <TextBlock Height="60" HorizontalAlignment="Left" FontSize="30" Margin="5,20,0,0" Name="textBlock1" Text="Font Size" VerticalAlignment="Top" TextWrapping="Wrap" Padding="0,5" />
+            <TextBlock Height="60" HorizontalAlignment="Left" FontSize="20" Margin="5,85,0,0" Name="textBlock2" Text="(drag finger along slider to adjust)" VerticalAlignment="Top" TextWrapping="Wrap" Padding="0,5" />
         </Grid>
     </Grid>
  

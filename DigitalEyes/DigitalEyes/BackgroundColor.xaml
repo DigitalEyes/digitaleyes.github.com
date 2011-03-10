@@ -22,52 +22,52 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="DIGITAL EYES" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="Background" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="ApplicationTitle" Text="DIGITAL EYES" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="NoWrap" />
+            <TextBlock x:Name="PageTitle" Text="background" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" TextWrapping="NoWrap" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Rectangle Height="70" HorizontalAlignment="Left" Margin="143,46,0,0" Name="rectangle1" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" Fill="#FFB30000" />
-            <Rectangle Fill="#FF000094" Height="70" HorizontalAlignment="Left" Margin="42,261,0,0" Name="rectangle2" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="Yellow" Height="70" HorizontalAlignment="Left" Margin="42,492,0,0" Name="rectangle3" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="Green" Height="70" HorizontalAlignment="Left" Margin="143,153,0,0" Name="rectangle4" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="Blue" Height="70" HorizontalAlignment="Left" Margin="143,261,0,0" Name="rectangle5" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="#FF78C32B" Height="70" HorizontalAlignment="Left" Margin="360,153,0,0" Name="rectangle6" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="#FF003500" Height="70" HorizontalAlignment="Left" Margin="42,153,0,0" Name="rectangle7" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="#FF14D6E9" Height="70" HorizontalAlignment="Left" Margin="248,261,0,0" Name="rectangle8" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="#FF00C114" Height="70" HorizontalAlignment="Left" Margin="248,153,0,0" Name="rectangle9" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="#FFE94D22" Height="70" HorizontalAlignment="Left" Margin="360,46,0,0" Name="rectangle10" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="#FFE73A36" Height="70" HorizontalAlignment="Left" Margin="248,46,0,0" Name="rectangle11" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="#FF780000" Height="70" HorizontalAlignment="Left" Margin="42,46,0,0" Name="rectangle12" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="#FF96D6E9" Height="70" HorizontalAlignment="Left" Margin="360,261,0,0" Name="rectangle13" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="#FF580079" Height="70" HorizontalAlignment="Left" Margin="42,379,0,0" Name="rectangle14" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="White" Height="70" HorizontalAlignment="Left" Margin="143,492,0,0" Name="rectangle16" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="Purple" Height="70" HorizontalAlignment="Left" Margin="143,379,0,0" Name="rectangle15" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="Black" Height="70" HorizontalAlignment="Left" Margin="248,492,0,0" Name="rectangle17" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="#FFA6488D" Height="70" HorizontalAlignment="Left" Margin="248,379,0,0" Name="rectangle18" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="#FFA670A3" Height="70" HorizontalAlignment="Left" Margin="360,379,0,0" Name="rectangle19" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Rectangle Fill="Black" Height="70" HorizontalAlignment="Left" Margin="360,492,0,0" Name="rectangle20" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="42,46,0,0" Name="button1" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="42,492,0,0" Name="button2" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="360,377,0,0" Name="button3" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="248,377,0,0" Name="button4" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="143,377,0,0" Name="button5" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="42,377,0,0" Name="button6" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="360,259,0,0" Name="button7" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="248,259,0,0" Name="button8" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="143,259,0,0" Name="button9" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="42,259,0,0" Name="button10" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="360,153,0,0" Name="button11" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="248,151,0,0" Name="button12" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="143,153,0,0" Name="button13" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="42,153,0,0" Name="button14" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="360,46,0,0" Name="button15" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="248,46,0,0" Name="button16" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="143,46,0,0" Name="button17" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="360,492,0,0" Name="button18" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="248,490,0,0" Name="button19" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="143,490,0,0" Name="button20" VerticalAlignment="Top" Width="70" Foreground="White" BorderBrush="Black" />
+            <Rectangle Fill="#FFB30000" Height="70" HorizontalAlignment="Left" Margin="132,33,0,0" Name="red2" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="#FF000094" Height="70" HorizontalAlignment="Left" Margin="31,248,0,0" Name="blue1" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="Yellow" Height="70" HorizontalAlignment="Left" Margin="31,479,0,0" Name="yellow1" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="Green" Height="70" HorizontalAlignment="Left" Margin="132,140,0,0" Name="green2" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="Blue" Height="70" HorizontalAlignment="Left" Margin="132,248,0,0" Name="blue2" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="#FF78C32B" Height="70" HorizontalAlignment="Left" Margin="349,140,0,0" Name="green4" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="#FF003500" Height="70" HorizontalAlignment="Left" Margin="31,140,0,0" Name="green1" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="#FF14D6E9" Height="70" HorizontalAlignment="Left" Margin="237,248,0,0" Name="blue3" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="#FF00C114" Height="70" HorizontalAlignment="Left" Margin="237,140,0,0" Name="green3" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="#FFE94D22" Height="70" HorizontalAlignment="Left" Margin="349,33,0,0" Name="red4" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="#FFE73A36" Height="70" HorizontalAlignment="Left" Margin="237,33,0,0" Name="red3" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="#FF780000" Height="70" HorizontalAlignment="Left" Margin="31,33,0,0" Name="red1" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="#FF96D6E9" Height="70" HorizontalAlignment="Left" Margin="349,248,0,0" Name="blue4" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="#FF580079" Height="70" HorizontalAlignment="Left" Margin="31,366,0,0" Name="purple1" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="White" Height="70" HorizontalAlignment="Left" Margin="132,479,0,0" Name="white1" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="Purple" Height="70" HorizontalAlignment="Left" Margin="132,366,0,0" Name="purple2" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="Black" Height="70" HorizontalAlignment="Left" Margin="237,479,0,0" Name="black1" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="#FFA6488D" Height="70" HorizontalAlignment="Left" Margin="237,366,0,0" Name="purple3" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="#FFA670A3" Height="70" HorizontalAlignment="Left" Margin="349,366,0,0" Name="purple4" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Rectangle Fill="Black" Height="70" HorizontalAlignment="Left" Margin="349,479,0,0" Name="black2" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="31,33,0,0" Name="b_red1" VerticalAlignment="Top" Width="70" Click="b_red1_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="31,479,0,0" Name="b_yellow1" VerticalAlignment="Top" Width="70" Click="b_yellow1_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="349,364,0,0" Name="b_purple4" VerticalAlignment="Top" Width="70" Click="b_purple4_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="237,364,0,0" Name="b_purple3" VerticalAlignment="Top" Width="70" Click="b_purple3_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="132,364,0,0" Name="b_purple2" VerticalAlignment="Top" Width="70" Click="b_purple2_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="31,364,0,0" Name="b_purple1" VerticalAlignment="Top" Width="70" Click="b_purple1_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="349,246,0,0" Name="b_blue4" VerticalAlignment="Top" Width="70" Click="b_blue4_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="237,246,0,0" Name="b_blue3" VerticalAlignment="Top" Width="70" Click="b_blue3_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="132,246,0,0" Name="b_blue2" VerticalAlignment="Top" Width="70" Click="b_blue2_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="31,246,0,0" Name="b_blue1" VerticalAlignment="Top" Width="70" Click="b_blue1_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="349,140,0,0" Name="b_green4" VerticalAlignment="Top" Width="70" Click="b_green4_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="237,138,0,0" Name="b_green3" VerticalAlignment="Top" Width="70" Click="b_green3_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="132,140,0,0" Name="b_green2" VerticalAlignment="Top" Width="70" Click="b_green2_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="31,140,0,0" Name="b_green1" VerticalAlignment="Top" Width="70" Click="b_green1_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="349,33,0,0" Name="b_red4" VerticalAlignment="Top" Width="70" Click="b_red4_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="237,33,0,0" Name="b_red3" VerticalAlignment="Top" Width="70" Click="b_red3_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="132,33,0,0" Name="b_red2" VerticalAlignment="Top" Width="70" Click="b_red2_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="349,479,0,0" Name="b_black2" VerticalAlignment="Top" Width="70" Click="b_black2_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="237,477,0,0" Name="b_black1" VerticalAlignment="Top" Width="70" Click="b_black1_Click" />
+            <Button BorderBrush="Black" Foreground="White" Height="72" HorizontalAlignment="Left" Margin="132,477,0,0" Name="b_white1" VerticalAlignment="Top" Width="70" Click="b_white1_Click" />
         </Grid>
     </Grid>
  

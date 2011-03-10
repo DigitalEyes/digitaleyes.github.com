@@ -34,4 +34,3 @@ C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debu
 C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\XapCacheFile.xml
 C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\BackgroundColor.g.i.cs
 C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\FontColor.g.i.cs
-C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\FontSize.g.i.cs
