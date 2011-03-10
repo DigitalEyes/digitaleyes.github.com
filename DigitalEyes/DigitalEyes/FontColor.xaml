@@ -22,7 +22,7 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle" Text="DIGITAL EYES" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="text color" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="PageTitle" Text="text color" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="White" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
@@ -47,26 +47,26 @@
             <Rectangle Fill="#FFA6488D" Height="70" HorizontalAlignment="Left" Margin="239,364,0,0" Name="purple3" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
             <Rectangle Fill="#FFA670A3" Height="70" HorizontalAlignment="Left" Margin="351,364,0,0" Name="purple4" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70" />
             <Rectangle Fill="Black" Height="70" HorizontalAlignment="Left" Margin="351,477,0,0" Name="black2" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="70"  />
-            <Button Height="72" HorizontalAlignment="Left" Margin="33,31,0,0" Name="b_red1" VerticalAlignment="Top" Width="70" Click="b_red1_Click_1" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="33,477,0,0" Name="b_yellow1" VerticalAlignment="Top" Width="70"  />
-            <Button Height="72" HorizontalAlignment="Left" Margin="351,362,0,0" Name="b_purple4" VerticalAlignment="Top" Width="70"  />
-            <Button Height="72" HorizontalAlignment="Left" Margin="239,362,0,0" Name="b_purple3" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="134,362,0,0" Name="b_purple2" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="33,362,0,0" Name="b_purple1" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="351,244,0,0" Name="b_blue4" VerticalAlignment="Top" Width="70"  />
-            <Button Height="72" HorizontalAlignment="Left" Margin="239,244,0,0" Name="b_blue3" VerticalAlignment="Top" Width="70"  />
-            <Button Height="72" HorizontalAlignment="Left" Margin="134,244,0,0" Name="b_blue2" VerticalAlignment="Top" Width="70"  />
-            <Button Height="72" HorizontalAlignment="Left" Margin="33,244,0,0" Name="b_blue1" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="351,138,0,0" Name="b_green4" VerticalAlignment="Top" Width="70"/>
-            <Button Height="72" HorizontalAlignment="Left" Margin="239,136,0,0" Name="b_green3" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="134,138,0,0" Name="b_green2" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="33,138,0,0" Name="b_green1" VerticalAlignment="Top" Width="70"  />
-            <Button Height="72" HorizontalAlignment="Left" Margin="351,31,0,0" Name="b_red4" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="239,31,0,0" Name="b_red3" VerticalAlignment="Top" Width="70"  />
-            <Button Height="72" HorizontalAlignment="Left" Margin="134,31,0,0" Name="b_red2" VerticalAlignment="Top" Width="70"  />
-            <Button Height="72" HorizontalAlignment="Left" Margin="351,477,0,0" Name="b_black2" VerticalAlignment="Top" Width="70" />
-            <Button Height="72" HorizontalAlignment="Left" Margin="239,475,0,0" Name="b_black1" VerticalAlignment="Top" Width="70"  />
-            <Button BorderBrush="Black" Foreground="White" Height="72" HorizontalAlignment="Left" Margin="134,475,0,0" Name="b_white1" VerticalAlignment="Top" Width="70"  />
+            <Button Height="72" HorizontalAlignment="Left" Margin="33,31,0,0" Name="b_red1" VerticalAlignment="Top" Width="70" Click="b_red1_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="33,477,0,0" Name="b_yellow1" VerticalAlignment="Top" Width="70" Click="b_yellow1_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="351,362,0,0" Name="b_purple4" VerticalAlignment="Top" Width="70" Click="b_purple4_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="239,362,0,0" Name="b_purple3" VerticalAlignment="Top" Width="70" Click="b_purple3_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="134,362,0,0" Name="b_purple2" VerticalAlignment="Top" Width="70" Click="b_purple2_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="33,362,0,0" Name="b_purple1" VerticalAlignment="Top" Width="70" Click="b_purple1_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="351,244,0,0" Name="b_blue4" VerticalAlignment="Top" Width="70" Click="b_blue4_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="239,244,0,0" Name="b_blue3" VerticalAlignment="Top" Width="70" Click="b_blue3_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="134,244,0,0" Name="b_blue2" VerticalAlignment="Top" Width="70" Click="b_blue2_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="33,244,0,0" Name="b_blue1" VerticalAlignment="Top" Width="70" Click="b_blue1_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="351,138,0,0" Name="b_green4" VerticalAlignment="Top" Width="70" Click="b_green4_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="239,136,0,0" Name="b_green3" VerticalAlignment="Top" Width="70" Click="b_green3_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="134,138,0,0" Name="b_green2" VerticalAlignment="Top" Width="70" Click="b_green2_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="33,138,0,0" Name="b_green1" VerticalAlignment="Top" Width="70" Click="b_green1_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="351,31,0,0" Name="b_red4" VerticalAlignment="Top" Width="70" Click="b_red4_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="239,31,0,0" Name="b_red3" VerticalAlignment="Top" Width="70" Click="b_red3_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="134,31,0,0" Name="b_red2" VerticalAlignment="Top" Width="70" Click="b_red2_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="351,477,0,0" Name="b_black2" VerticalAlignment="Top" Width="70" Click="b_black2_Click" />
+            <Button Height="72" HorizontalAlignment="Left" Margin="239,475,0,0" Name="b_black1" VerticalAlignment="Top" Width="70" Click="b_black1_Click" />
+            <Button BorderBrush="Black" Foreground="White" Height="72" HorizontalAlignment="Left" Margin="134,475,0,0" Name="b_white1" VerticalAlignment="Top" Width="70" Click="b_white1_Click" />
         </Grid>
     </Grid>
  

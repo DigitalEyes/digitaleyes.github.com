@@ -29,6 +29,7 @@ namespace DigitalEyes
         {
             object FontSizeObject;
             object BGC;
+            object FC;
             if (phoneAppService.State.ContainsKey("LargeFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("LargeFontSize", out FontSizeObject))
@@ -63,6 +64,16 @@ namespace DigitalEyes
                     string col = Convert.ToString(BGC);
                     LayoutRoot.Background = new SolidColorBrush(GetColorFromHex(col).Color);
 
+
+                }
+            }
+            if (phoneAppService.State.ContainsKey("FontColor"))
+            {
+                if (phoneAppService.State.TryGetValue("FontColor", out FC))
+                {
+                    string col = Convert.ToString(FC);
+                    ApplicationTitle.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
+                    PageTitle.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
 
                 }
             }
