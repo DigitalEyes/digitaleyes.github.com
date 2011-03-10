@@ -49,22 +49,25 @@ namespace DigitalEyes
                     textBlock1.FontSize = mediumFontSize;
                     BackgroundColorButton.FontSize = mediumFontSize;
                     TextColorButton.FontSize = mediumFontSize;
+                    checkBox1.FontSize = mediumFontSize;
 
                     if (mediumFontSize < 23)
                     {
                         BackgroundColorButton.Height = mediumFontSize * 4;
                         TextColorButton.Height = mediumFontSize * 4;
-
+                        checkBox1.Height = mediumFontSize * 4;
                     }
                     else if (mediumFontSize < 30)
                     {
                         BackgroundColorButton.Height = mediumFontSize * 3;
                         TextColorButton.Height = mediumFontSize * 3;
+                        checkBox1.Height = mediumFontSize * 3;
                     }
                     else
                     {
                         BackgroundColorButton.Height = mediumFontSize * 2.5;
                         TextColorButton.Height = mediumFontSize * 2.5;
+                        checkBox1.Height = mediumFontSize * 2.5;
                     }
                     
                 }
@@ -100,6 +103,7 @@ namespace DigitalEyes
                     TextColorButton.Foreground = brush;
                     textBlock1.Foreground = brush;
                     textBlock2.Foreground = brush;
+                    checkBox1.Foreground = brush;
                 }
             }
         }
@@ -115,17 +119,7 @@ namespace DigitalEyes
         }
 
        
-        public static SolidColorBrush GetColorFromHexa(string hexaColor) //does not work 
-        {
-            return new SolidColorBrush(
-                Color.FromArgb(
-                    Convert.ToByte(hexaColor.Substring(1, 2), 16),
-                    Convert.ToByte(hexaColor.Substring(3, 2), 16),
-                    Convert.ToByte(hexaColor.Substring(5, 2), 16),
-                    Convert.ToByte(hexaColor.Substring(7, 2), 16)
-                )
-            );
-        }
+       
 
         private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
@@ -147,22 +141,26 @@ namespace DigitalEyes
                 textBlock2.FontSize = smallFontSize; 
                 BackgroundColorButton.FontSize = mediumFontSize;
                 TextColorButton.FontSize = mediumFontSize;
+                checkBox1.FontSize = mediumFontSize;
 
                 if (mediumFontSize < 23)
                 {
                     BackgroundColorButton.Height = mediumFontSize * 4;
                     TextColorButton.Height = mediumFontSize * 4;
+                    checkBox1.Height = mediumFontSize * 4;
 
                 }
                 else if (mediumFontSize < 30)
                 {
                     BackgroundColorButton.Height = mediumFontSize * 3;
                     TextColorButton.Height = mediumFontSize * 3;
+                    checkBox1.Height = mediumFontSize * 3;
                 }
                 else
                 {
                     BackgroundColorButton.Height = mediumFontSize * 2.5;
                     TextColorButton.Height = mediumFontSize * 2.5;
+                    checkBox1.Height = mediumFontSize * 2.5;
                 }
             }
         }

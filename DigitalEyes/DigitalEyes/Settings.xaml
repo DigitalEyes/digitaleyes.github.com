@@ -33,6 +33,7 @@
             <Slider x:Name="scaleSlider" Height="80" Minimum="10" Maximum="50" SmallChange="2" HorizontalAlignment="Left" Margin="5,149,0,0" VerticalAlignment="Top" Width="450" ValueChanged="slider1_ValueChanged" Padding="0,5,0,0" />
             <TextBlock Height="60" HorizontalAlignment="Left" FontSize="30" Margin="5,20,0,0" Name="textBlock1" Text="Font Size" VerticalAlignment="Top" TextWrapping="Wrap" Padding="0,5" />
             <TextBlock Height="60" HorizontalAlignment="Left" FontSize="20" Margin="5,85,0,0" Name="textBlock2" Text="(drag finger along slider to adjust)" VerticalAlignment="Top" TextWrapping="Wrap" Padding="0,5" />
+            <CheckBox Content="Avoid Stairs" Height="72" HorizontalAlignment="Left" Margin="12,468,0,0" Name="checkBox1" VerticalAlignment="Top" IsChecked="True" />
         </Grid>
     </Grid>
  

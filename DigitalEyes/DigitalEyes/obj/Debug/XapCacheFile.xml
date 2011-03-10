@@ -1,8 +1,8 @@
-﻿<xapCache source="C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\Bin\Debug\DigitalEyes.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="3/10/2011 1:21:33 PM">
-  <file source="C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="3/10/2011 11:10:47 AM" />
-  <file source="C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\obj\Debug\DigitalEyes.dll" archivePath="DigitalEyes.dll" lastWriteTime="3/10/2011 1:21:28 PM" />
-  <file source="C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="3/10/2011 11:10:27 AM" />
-  <file source="C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\Background.png" archivePath="Background.png" lastWriteTime="3/10/2011 11:10:28 AM" />
-  <file source="C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="3/10/2011 11:10:35 AM" />
-  <file source="C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="3/10/2011 11:12:08 AM" />
+﻿<xapCache source="C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\Bin\Debug\DigitalEyes.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="3/10/2011 4:39:41 PM">
+  <file source="C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="3/10/2011 11:10:48 AM" />
+  <file source="C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\DigitalEyes.dll" archivePath="DigitalEyes.dll" lastWriteTime="3/10/2011 4:39:40 PM" />
+  <file source="C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="3/10/2011 11:10:28 AM" />
+  <file source="C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\Background.png" archivePath="Background.png" lastWriteTime="3/10/2011 11:10:30 AM" />
+  <file source="C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="3/10/2011 11:10:36 AM" />
+  <file source="C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="3/10/2011 11:12:10 AM" />
 </xapCache>
