@@ -99,7 +99,7 @@ namespace DigitalEyes
         private void b_green2_Click(object sender, RoutedEventArgs e)
         {
             LayoutRoot.Background = new SolidColorBrush(Colors.Green);
-            phoneAppService.State["BackgroundColor"] = "#00FF00";
+            phoneAppService.State["BackgroundColor"] = Colors.Green;
         }
         private void b_green3_Click(object sender, RoutedEventArgs e)
         {
@@ -119,7 +119,7 @@ namespace DigitalEyes
         private void b_blue2_Click(object sender, RoutedEventArgs e)
         {
             LayoutRoot.Background = new SolidColorBrush(Colors.Blue);
-            phoneAppService.State["BackgroundColor"] ="#0000FF";
+            phoneAppService.State["BackgroundColor"] = Colors.Blue;
         }
         private void b_blue3_Click(object sender, RoutedEventArgs e)
         {
@@ -139,7 +139,7 @@ namespace DigitalEyes
         private void b_purple2_Click(object sender, RoutedEventArgs e)
         {
             LayoutRoot.Background = new SolidColorBrush(Colors.Purple);
-            phoneAppService.State["BackgroundColor"] = "#800080";
+            phoneAppService.State["BackgroundColor"] = Colors.Purple;
         }
         private void b_purple3_Click(object sender, RoutedEventArgs e)
         {
@@ -154,22 +154,22 @@ namespace DigitalEyes
         private void b_yellow1_Click(object sender, RoutedEventArgs e)
         {
             LayoutRoot.Background = new SolidColorBrush(Colors.Yellow);
-            phoneAppService.State["BackgroundColor"] = "#FFFF00";
+            phoneAppService.State["BackgroundColor"] = Colors.Yellow;
         }
         private void b_white1_Click(object sender, RoutedEventArgs e)
         {
             LayoutRoot.Background = new SolidColorBrush(Colors.White);
-            phoneAppService.State["BackgroundColor"] = "#FFFFFF";
+            phoneAppService.State["BackgroundColor"] = Colors.White;
         }
         private void b_black1_Click(object sender, RoutedEventArgs e)
         {
             LayoutRoot.Background = new SolidColorBrush(Colors.Black);
-            phoneAppService.State["BackgroundColor"] = "#000000";
+            phoneAppService.State["BackgroundColor"] = Colors.Black;
         }
         private void b_black2_Click(object sender, RoutedEventArgs e)
         {
             LayoutRoot.Background = new SolidColorBrush(Colors.Black);
-            phoneAppService.State["BackgroundColor"] = "#000000";
+            phoneAppService.State["BackgroundColor"] = Colors.Black;
         }
         private SolidColorBrush GetColorFromHex(string myColor)
         {
