@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Microsoft.Phone.Tasks;
 using Microsoft.Xna.Framework.Audio;
 using System.IO;
 
@@ -18,11 +19,24 @@ namespace DigitalEyes
 {
     public partial class Scan : PhoneApplicationPage
     {
+        //CameraCaptureTask cameraCaptureTask;
+
         public Scan()
         {
             InitializeComponent();
+          /*  cameraCaptureTask = new CameraCaptureTask();
+            cameraCaptureTask.Completed += new EventHandler<PhotoResult>(cameraCaptureTask_Completed);
+            try
+            {
+                cameraCaptureTask.Show();
+            }
+            catch (System.InvalidOperationException ex)
+            {
+                //catch but do nothing
+            }*/
+            textBlock1.Text = "This is room 3437. Multiple Computer Science and Chemical Engineering classes meet here.  It is a tradiation classroom setup with chairs attached to the desks.  There are no stairs inside this room.";
         }
-
+      
 /****************************CHANGE FONT SIZE DYNAMICALLY ****************************************/
         PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
 
@@ -91,6 +105,11 @@ namespace DigitalEyes
                     Convert.ToByte(myColor.Substring(7, 2), 16)
                 )
             );
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Directions.xaml", UriKind.RelativeOrAbsolute));
         }
        
     }

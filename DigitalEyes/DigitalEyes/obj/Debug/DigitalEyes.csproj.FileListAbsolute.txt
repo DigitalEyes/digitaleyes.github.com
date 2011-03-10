@@ -34,3 +34,41 @@ C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debu
 C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\XapCacheFile.xml
 C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\BackgroundColor.g.i.cs
 C:\Program Files\cygwin\home\Andrea\DigitalEyes\DigitalEyes\DigitalEyes\obj\Debug\FontColor.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\Bin\Debug\ApplicationIcon.png
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\Bin\Debug\Background.png
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\Bin\Debug\DigitalEyes.dll
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\Bin\Debug\DigitalEyes.pdb
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\Bin\Debug\AppManifest.xaml
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\Bin\Debug\DigitalEyes.xap
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\obj\Debug\ResolveAssemblyReference.cache
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\obj\Debug\App.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\obj\Debug\BackgroundColor.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\obj\Debug\Directions.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\obj\Debug\FontColor.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\obj\Debug\Location.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\obj\Debug\MainPage.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\obj\Debug\Scan.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\obj\Debug\Settings.g.i.cs
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\obj\Debug\DigitalEyes.g.resources
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\obj\Debug\DigitalEyes.dll
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\obj\Debug\DigitalEyes.pdb
+C:\Program Files\cygwin\home\Andrea\DigitalEyes2\DigitalEyes\DigitalEyes\obj\Debug\XapCacheFile.xml
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\Bin\Debug\ApplicationIcon.png
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\Bin\Debug\Background.png
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\Bin\Debug\DigitalEyes.dll
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\Bin\Debug\DigitalEyes.pdb
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\Bin\Debug\AppManifest.xaml
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\Bin\Debug\DigitalEyes.xap
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\obj\Debug\App.g.i.cs
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\obj\Debug\BackgroundColor.g.i.cs
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\obj\Debug\Directions.g.i.cs
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\obj\Debug\FontColor.g.i.cs
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\obj\Debug\Location.g.i.cs
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\obj\Debug\MainPage.g.i.cs
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\obj\Debug\Scan.g.i.cs
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\obj\Debug\Settings.g.i.cs
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\obj\Debug\DigitalEyes.g.resources
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\obj\Debug\DigitalEyes.dll
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\obj\Debug\DigitalEyes.pdb
+C:\Users\Elizabeth\Downloads\DigitalEyes\DigitalEyes\obj\Debug\XapCacheFile.xml

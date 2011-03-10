@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Microsoft.Phone.Tasks;
 using Microsoft.Xna.Framework.Audio;
 using System.IO;
 
@@ -19,11 +20,33 @@ namespace DigitalEyes
     public partial class MainPage : PhoneApplicationPage
     {
         // Constructor
+        CameraCaptureTask cameraCaptureTask1;
+
         public MainPage()
         {
             InitializeComponent();
+            
         }
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            object FC;
+            if (phoneAppService.State.ContainsKey("FontColor"))
+            {
+                if (phoneAppService.State.TryGetValue("FontColor", out FC))
+                {
+                    string col = Convert.ToString(FC);
+                    SolidColorBrush brush = new SolidColorBrush(GetColorFromHex(col).Color);
+                    PageTitle.Foreground = brush;
+                    button1.Foreground = brush;
+                    button2.Foreground = brush;
+                    button3.Foreground = brush;
+                    button4.Foreground = brush;
+                }
+            }
 
+
+            base.OnNavigatedFrom(e);
+        }
 
         PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
 
@@ -65,25 +88,30 @@ namespace DigitalEyes
                     button1.FontSize = mediumFontSize;
                     button2.FontSize = mediumFontSize;
                     button3.FontSize = mediumFontSize;
+                    button4.FontSize = mediumFontSize;
 
                     if (mediumFontSize < 23)
                     {
                         button1.Height = mediumFontSize * 4;
                         button2.Height = mediumFontSize * 4;
                         button3.Height = mediumFontSize * 4;
+                        button4.Height = mediumFontSize * 4;
 
                     }
                     else if (mediumFontSize < 30)
                     {
                         button1.Height = mediumFontSize * 3;
                         button2.Height = mediumFontSize * 3;
-                        button3.Height = mediumFontSize * 3;
+                        button3.Height = mediumFontSize * 3; 
+                        button4.Height = mediumFontSize * 3;
+                        
                     }
                     else
                     {
                         button1.Height = mediumFontSize * 2.5;
                         button2.Height = mediumFontSize * 2.5;
                         button3.Height = mediumFontSize * 2.5;
+                        button4.Height = mediumFontSize * 2.5;
                     }
                 }
             }
@@ -111,10 +139,12 @@ namespace DigitalEyes
                 if (phoneAppService.State.TryGetValue("FontColor", out FC))
                 {
                     string col = Convert.ToString(FC);
-                    PageTitle.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    button1.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    button2.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    button3.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
+                    SolidColorBrush brush = new SolidColorBrush(GetColorFromHex(col).Color);
+                    PageTitle.Foreground = brush;
+                    //button1.Foreground = brush;
+                    //button2.Foreground = brush;
+                    //button3.Foreground = brush;
+                    //button4.Foreground = brush;
                 }
             }
 
@@ -122,8 +152,30 @@ namespace DigitalEyes
 /**********************************END CHANGE FONT SIZE DYNAMICALLY ******************************/
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Scan.xaml", UriKind.RelativeOrAbsolute));
+            cameraCaptureTask1 = new CameraCaptureTask();
+            cameraCaptureTask1.Completed += new EventHandler<PhotoResult>(cameraCaptureTask_Completed);
+            try
+            {
+                cameraCaptureTask1.Show();
+            }
+            catch (System.InvalidOperationException ex)
+            {
+                   //do nothing
+            }
+           //
+           // NavigationService.Navigate(new Uri("/Scan.xaml", UriKind.RelativeOrAbsolute));
+            //commented to add in function below
         }
+        void cameraCaptureTask_Completed(object sender, PhotoResult e)
+        {
+            changeScreen();
+            //don't need for now but this is where we will store the photo to memory  
+           
+        }
+        void changeScreen()
+        {
+            NavigationService.Navigate(new Uri("/Scan.xaml", UriKind.RelativeOrAbsolute));
+        }   
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
@@ -149,6 +201,11 @@ namespace DigitalEyes
                     Convert.ToByte(myColor.Substring(7, 2), 16)
                 )
             );
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

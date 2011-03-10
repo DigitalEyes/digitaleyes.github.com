@@ -25,6 +25,28 @@ namespace DigitalEyes
 /****************************CHANGE FONT SIZE DYNAMICALLY ****************************************/
         PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
 
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            object LocationObject;
+
+            if (phoneAppService.State.ContainsKey("Location"))
+            {
+                if (phoneAppService.State.TryGetValue("Location", out LocationObject))
+                {
+                    PageTitle.Text = LocationObject.ToString();
+                    
+                }
+            }
+            else
+            {
+                PageTitle.Text = "No Location Specified";
+            }
+            base.OnNavigatedTo(e);
+            
+
+
+        }
+
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
             object FontSizeObject;
@@ -36,7 +58,6 @@ namespace DigitalEyes
                 {
                     double largeFontSize = Convert.ToDouble(FontSizeObject);
 
-                    PageTitle.FontSize = largeFontSize;
                 }
             }
             if (phoneAppService.State.ContainsKey("MediumFontSize"))
@@ -45,7 +66,15 @@ namespace DigitalEyes
                 {
                     double mediumFontSize = Convert.ToDouble(FontSizeObject);
 
-                    
+                    PageTitle.FontSize = mediumFontSize;
+                    textBlock1.FontSize = mediumFontSize;
+                    textBlock2.FontSize = mediumFontSize;
+                    textBlock3.FontSize = mediumFontSize;
+                    textBlock4.FontSize = mediumFontSize;
+                    button1.FontSize = mediumFontSize;
+
+   
+
                 }
             }
             if (phoneAppService.State.ContainsKey("SmallFontSize"))
@@ -63,8 +92,7 @@ namespace DigitalEyes
                 {
                     string col = Convert.ToString(BGC);
                     LayoutRoot.Background = new SolidColorBrush(GetColorFromHex(col).Color);
-
-
+                    
                 }
             }
             if (phoneAppService.State.ContainsKey("FontColor"))
@@ -74,7 +102,11 @@ namespace DigitalEyes
                     string col = Convert.ToString(FC);
                     ApplicationTitle.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
                     PageTitle.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-
+                    textBlock1.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
+                    textBlock2.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
+                    textBlock3.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
+                    textBlock4.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
+                    button1.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
                 }
             }
 
@@ -90,6 +122,11 @@ namespace DigitalEyes
                     Convert.ToByte(myColor.Substring(7, 2), 16)
                 )
             );
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Scan.xaml", UriKind.RelativeOrAbsolute));
         }
 
        

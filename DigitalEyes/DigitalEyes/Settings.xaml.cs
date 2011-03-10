@@ -93,12 +93,13 @@ namespace DigitalEyes
                 if (phoneAppService.State.TryGetValue("FontColor", out FC))
                 {
                     string col = Convert.ToString(FC);
-                    ApplicationTitle.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    PageTitle.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    BackgroundColorButton.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    TextColorButton.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    textBlock1.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    textBlock2.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
+                    SolidColorBrush brush = new SolidColorBrush(GetColorFromHex(col).Color);
+                    ApplicationTitle.Foreground = brush;
+                    PageTitle.Foreground = brush;
+                    BackgroundColorButton.Foreground = brush;
+                    TextColorButton.Foreground = brush;
+                    textBlock1.Foreground = brush;
+                    textBlock2.Foreground = brush;
                 }
             }
         }

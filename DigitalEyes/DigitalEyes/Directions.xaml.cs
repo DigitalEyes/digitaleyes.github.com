@@ -26,6 +26,12 @@ namespace DigitalEyes
 /****************************CHANGE FONT SIZE DYNAMICALLY ****************************************/
         PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
 
+        protected override void OnNavigatedFrom(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            phoneAppService.State["Location"] = textBox1.Text;
+            base.OnNavigatedFrom(e);
+        }
+
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
             object FontSizeObject;
@@ -48,30 +54,31 @@ namespace DigitalEyes
                     
                     textBox1.FontSize = mediumFontSize;
                     button1.FontSize = mediumFontSize;
-                    button2.FontSize = mediumFontSize;
+                    //button2.FontSize = mediumFontSize;
                     
                     if (mediumFontSize < 23)
                     {
                         button1.Height = mediumFontSize * 4;
-                        button2.Height = mediumFontSize * 4;
+                        //button2.Height = mediumFontSize * 4;
                         textBox1.Height = mediumFontSize * 4;
 
                     }
                     else if (mediumFontSize < 30)
                     {
                         button1.Height = mediumFontSize * 3;
-                        button2.Height = mediumFontSize * 3;
+                        //button2.Height = mediumFontSize * 3;
                         textBox1.Height = mediumFontSize * 3;
                     }
                     else
                     {
                         button1.Height = mediumFontSize * 2.5;
-                        button2.Height = mediumFontSize * 2.5;
+                        //button2.Height = mediumFontSize * 2.5;
                         textBox1.Height = mediumFontSize * 2.5;
                     }
 
                 }
             }
+
             if (phoneAppService.State.ContainsKey("SmallFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("SmallFontSize", out FontSizeObject))
@@ -99,13 +106,14 @@ namespace DigitalEyes
                 if (phoneAppService.State.TryGetValue("FontColor", out FC))
                 {
                     string col = Convert.ToString(FC);
-                    ApplicationTitle.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    PageTitle.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    textBlock1.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    textBox1.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    button1.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    button2.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    hyperlinkButton1.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
+                    SolidColorBrush brush = new SolidColorBrush(GetColorFromHex(col).Color);
+                    ApplicationTitle.Foreground = brush;
+                    PageTitle.Foreground = brush;
+                    textBlock1.Foreground = brush;
+                    textBox1.Foreground = brush;
+                    button1.Foreground = brush;
+                    //button2.Foreground = brush;
+                    hyperlinkButton1.Foreground = brush;
                 }
             }
 
@@ -121,6 +129,11 @@ namespace DigitalEyes
                     Convert.ToByte(myColor.Substring(7, 2), 16)
                 )
             );
+        }
+
+        private void textBox1_ManipulationStarted(object sender, ManipulationStartedEventArgs e)
+        {
+
         }
 
     }

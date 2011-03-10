@@ -27,7 +27,10 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock HorizontalAlignment="Left" Margin="9,36,0,410" Name="textBlock1" Text="This is room 3437. Multiple Computer Science and Chemical Engineering classes meet here.  It is a traditional classroom setup wth chairs attached to desks.  There are no stairs inside this room." Width="436" TextWrapping="Wrap" />
+            <Button Content="Directions" Height="72" HorizontalAlignment="Left" Margin="6,227,0,0" Name="button1" VerticalAlignment="Top" Width="439" Click="button1_Click" />
+        </Grid>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->

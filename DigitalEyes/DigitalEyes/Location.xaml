@@ -23,11 +23,17 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle" Text="DIGITAL EYES" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="(location)" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="PageTitle" Text="(location)" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="25.333" TextWrapping="Wrap" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock Height="61" HorizontalAlignment="Left" Margin="12,20,0,0" Name="textBlock1" Text="Current Location: Rm 3437" VerticalAlignment="Top" Width="438" TextWrapping="Wrap" />
+            <TextBlock Height="87" HorizontalAlignment="Left" Margin="12,87,0,0" Name="textBlock2" Text="1. From facing the tag, turn left and walk down the hallway." VerticalAlignment="Top" Width="438" TextWrapping="Wrap" />
+            <TextBlock Height="87" HorizontalAlignment="Left" Margin="9,163,0,0" Name="textBlock3" Text="2. Continue straight for 50 meters. Pass the elevator.  " VerticalAlignment="Top" Width="438" TextWrapping="Wrap" />
+            <TextBlock Height="87" HorizontalAlignment="Left" Margin="9,243,0,0" Name="textBlock4" Text="3. Destination is on right." VerticalAlignment="Top" Width="438" TextWrapping="Wrap" />
+            <Button Content="Scan Intermediate Location" Height="72" HorizontalAlignment="Left" Margin="12,333,0,0" Name="button1" VerticalAlignment="Top" Width="435" Click="button1_Click" />
+        </Grid>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->

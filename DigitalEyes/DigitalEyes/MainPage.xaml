@@ -28,8 +28,9 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <Button Content="Scan" Height="72" HorizontalAlignment="Left" Margin="9,70,0,0" Name="button1" VerticalAlignment="Top" Width="441" Click="button1_Click" SizeChanged="button1_SizeChanged" />
-            <Button Content="Directions" Height="72" HorizontalAlignment="Left" Margin="9,201,0,0" Name="button2" VerticalAlignment="Top" Width="441" Click="button2_Click" />
-            <Button Content="Settings" Height="72" HorizontalAlignment="Left" Margin="9,340,0,0" Name="button3" VerticalAlignment="Top" Width="441" Click="button3_Click" />
+            <Button Content="Directions" Height="72" HorizontalAlignment="Left" Margin="9,193,0,0" Name="button2" VerticalAlignment="Top" Width="441" Click="button2_Click" />
+            <Button Content="Settings" Height="72" HorizontalAlignment="Left" Margin="9,318,0,0" Name="button3" VerticalAlignment="Top" Width="441" Click="button3_Click" Foreground="White" />
+            <Button Content="Record" Height="72" HorizontalAlignment="Left" Margin="5,448,0,0" Name="button4" VerticalAlignment="Top" Width="445" Click="button4_Click" />
         </Grid>
     </Grid>
  
