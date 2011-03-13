@@ -10,7 +10,7 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d" shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded" d:DesignHeight="767" d:DesignWidth="480" BorderBrush="{x:Null}">
+    mc:Ignorable="d" shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded" d:DesignHeight="767" d:DesignWidth="480" BorderBrush="{x:Null}" BackKeyPress="PhoneApplicationPage_BackKeyPress">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">

@@ -18,56 +18,56 @@ namespace DigitalEyes
 {
     public partial class BackgroundColor : PhoneApplicationPage
     {
+        PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
+
         public BackgroundColor()
         {
             InitializeComponent();
         }
-
-/****************************CHANGE FONT SIZE DYNAMICALLY ****************************************/
-        PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
-
+        /*Load and apply the saved values for the font size, background color, and font color*/
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
             object FontSizeObject;
             object BGC;
             object FC;
+
+            /*Set font size on page, large font objects*/
             if (phoneAppService.State.ContainsKey("LargeFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("LargeFontSize", out FontSizeObject))
                 {
                     double largeFontSize = Convert.ToDouble(FontSizeObject);
-
                     PageTitle.FontSize = largeFontSize;
                 }
             }
+            /*Set font size on page, medium font objects*/
             if (phoneAppService.State.ContainsKey("MediumFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("MediumFontSize", out FontSizeObject))
                 {
                     double mediumFontSize = Convert.ToDouble(FontSizeObject);
-
-                    
+                    //There are no medium sized objects on this page
                 }
             }
+            /*Set font size on page, small font objects*/
             if (phoneAppService.State.ContainsKey("SmallFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("SmallFontSize", out FontSizeObject))
                 {
                     double smallFontSize = Convert.ToDouble(FontSizeObject);
-
                     ApplicationTitle.FontSize = smallFontSize;
                 }
             }
+            /*Set the background color of the page*/
             if(phoneAppService.State.ContainsKey("BackgroundColor"))
             {
                 if (phoneAppService.State.TryGetValue("BackgroundColor", out BGC))
                 {
                     string col = Convert.ToString(BGC);
                     LayoutRoot.Background = new SolidColorBrush(GetColorFromHex(col).Color);
-
-
                 }  
             }
+            /*Set the font color of all text on the page*/
             if (phoneAppService.State.ContainsKey("FontColor"))
             {
                 if (phoneAppService.State.TryGetValue("FontColor", out FC))
@@ -75,13 +75,11 @@ namespace DigitalEyes
                     string col = Convert.ToString(FC);
                     ApplicationTitle.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
                     PageTitle.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-
                 }
             }
-
-
         }  
-/**********************************END CHANGE FONT SIZE DYNAMICALLY ******************************/
+        /*Background color picker, color picker will save the selected values for future page loads and
+         will also set the background of the page to the new color immediately*/
         private void b_red1_Click(object sender, RoutedEventArgs e)
         {
             LayoutRoot.Background = new SolidColorBrush(GetColorFromHex("#FF780000").Color);
@@ -182,6 +180,10 @@ namespace DigitalEyes
             LayoutRoot.Background = new SolidColorBrush(Colors.Black);
             phoneAppService.State["BackgroundColor"] = Colors.Black;
         }
+        /*End background color picker*/
+
+        /*Calculate the color value from an input hex color string so that the input for a new 
+         * SolidColorBrush is in the appropriate format*/
         private SolidColorBrush GetColorFromHex(string myColor)
         {
             return new SolidColorBrush(
@@ -193,8 +195,5 @@ namespace DigitalEyes
                 )
             );
         }
-
-
-
     }
 }

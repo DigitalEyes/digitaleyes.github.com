@@ -29,9 +29,10 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBlock Height="130" HorizontalAlignment="Left" Margin="12,6,0,0" Name="textBlock1" Text="Say a location keyword to hear directions, or say 'keywords' to hear the list of keywords." VerticalAlignment="Top" Width="450" TextWrapping="Wrap" />
-            <TextBox Height="74" HorizontalAlignment="Left" Margin="12,128,0,0" Name="textBox1" Text="Type location here" VerticalAlignment="Top" Width="440" TextWrapping="Wrap" ManipulationStarted="textBox1_ManipulationStarted" />
+            <TextBox Height="74" HorizontalAlignment="Left" Margin="12,128,0,0" Name="textBox1" Text="Type location here" VerticalAlignment="Top" Width="440" TextWrapping="Wrap" ManipulationStarted="textBox1_ManipulationStarted" GotFocus="textBox1_GotFocus" />
             <HyperlinkButton Content="Click for directions" Height="30" HorizontalAlignment="Left" Margin="12,210,0,0" Name="hyperlinkButton1" VerticalAlignment="Top" Width="250" NavigateUri="/DigitalEyes;component/Location.xaml" />
             <Button Content="Record" Height="72" HorizontalAlignment="Left" Margin="0,267,0,0" Name="button1" VerticalAlignment="Top" Width="450" />
+            <Button Content="Return to Main" Height="72" HorizontalAlignment="Left" Margin="0,373,0,0" Name="button2" VerticalAlignment="Top" Width="450" Click="button2_Click" />
             <!--<Button Content="Play" Height="72" HorizontalAlignment="Left" Margin="0,375,0,0" Name="button2" VerticalAlignment="Top" Width="450" />-->
         </Grid>
     </Grid>

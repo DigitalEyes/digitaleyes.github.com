@@ -22,15 +22,22 @@ namespace DigitalEyes
         {
             InitializeComponent();
         }
-
-/****************************CHANGE FONT SIZE DYNAMICALLY ****************************************/
         PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
 
+        /*Ensures that the new font color will be reloaded when navigated back to MainPage page. Allowing the default
+        value of the back button does not refresh all the values on the page */
+        private void PhoneApplicationPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+        }
+        /*Load and apply the saved values for the font size, background color, and font color */
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
             object FontSizeObject;
             object BGC;
             object FC;
+
+            /*Set font size on page, large font objects*/
             if (phoneAppService.State.ContainsKey("LargeFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("LargeFontSize", out FontSizeObject))
@@ -39,39 +46,41 @@ namespace DigitalEyes
                     PageTitle.FontSize = largeFontSize;
                 }
             }
+            /*Set font size on page, medium font objects*/
             if (phoneAppService.State.ContainsKey("MediumFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("MediumFontSize", out FontSizeObject))
                 {
                     double mediumFontSize = Convert.ToDouble(FontSizeObject);
 
-                    
                     textBlock1.FontSize = mediumFontSize;
-                    BackgroundColorButton.FontSize = mediumFontSize;
-                    TextColorButton.FontSize = mediumFontSize;
+                    button1.FontSize = mediumFontSize;
+                    button2.FontSize = mediumFontSize;
                     checkBox1.FontSize = mediumFontSize;
 
+                    /*Ensures that buttons resize appropriately, changes the height of button along with the fontSize
+                     * so that the font will fit inside the button box*/
                     if (mediumFontSize < 23)
                     {
-                        BackgroundColorButton.Height = mediumFontSize * 4;
-                        TextColorButton.Height = mediumFontSize * 4;
+                        button1.Height = mediumFontSize * 4;
+                        button2.Height = mediumFontSize * 4;
                         checkBox1.Height = mediumFontSize * 4;
                     }
                     else if (mediumFontSize < 30)
                     {
-                        BackgroundColorButton.Height = mediumFontSize * 3;
-                        TextColorButton.Height = mediumFontSize * 3;
+                        button1.Height = mediumFontSize * 3;
+                        button2.Height = mediumFontSize * 3;
                         checkBox1.Height = mediumFontSize * 3;
                     }
                     else
                     {
-                        BackgroundColorButton.Height = mediumFontSize * 2.5;
-                        TextColorButton.Height = mediumFontSize * 2.5;
+                        button1.Height = mediumFontSize * 2.5;
+                        button2.Height = mediumFontSize * 2.5;
                         checkBox1.Height = mediumFontSize * 2.5;
                     }
-                    
                 }
             }
+            /*Set font size on page, small font objects*/
             if (phoneAppService.State.ContainsKey("SmallFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("SmallFontSize", out FontSizeObject))
@@ -81,16 +90,16 @@ namespace DigitalEyes
                     textBlock2.FontSize = smallFontSize;
                 }
             }
+            /*Set the background color of the page from the saved color*/
             if (phoneAppService.State.ContainsKey("BackgroundColor"))
             {
                 if (phoneAppService.State.TryGetValue("BackgroundColor", out BGC))
                 {
                     string col = Convert.ToString(BGC);
                     LayoutRoot.Background = new SolidColorBrush(GetColorFromHex(col).Color);
-
-
                 }
             }
+            /*Set the font color of all text on the page*/
             if (phoneAppService.State.ContainsKey("FontColor"))
             {
                 if (phoneAppService.State.TryGetValue("FontColor", out FC))
@@ -99,28 +108,26 @@ namespace DigitalEyes
                     SolidColorBrush brush = new SolidColorBrush(GetColorFromHex(col).Color);
                     ApplicationTitle.Foreground = brush;
                     PageTitle.Foreground = brush;
-                    BackgroundColorButton.Foreground = brush;
-                    TextColorButton.Foreground = brush;
+                    button1.Foreground = brush;
+                    button2.Foreground = brush;
                     textBlock1.Foreground = brush;
                     textBlock2.Foreground = brush;
                     checkBox1.Foreground = brush;
                 }
             }
         }
-/**********************************END CHANGE FONT SIZE DYNAMICALLY ******************************/
+        /*Navigate to the background color picker page*/
         private void BackgroundColorButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/BackgroundColor.xaml", UriKind.RelativeOrAbsolute));
         }
-
+        /*Navigate to the text color picker page*/
         private void TextColorButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/FontColor.xaml", UriKind.RelativeOrAbsolute));
         }
-
-       
-       
-
+        /*Dynamically changes the font size on the page as the slider is moved so that the user can 
+         * see the immediate change of the font size*/
         private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             if (scaleSlider != null)
@@ -134,42 +141,37 @@ namespace DigitalEyes
                 phoneAppService.State["SmallFontSize"] = smallFontSize;
 
                 
-
                 ApplicationTitle.FontSize = smallFontSize;
                 PageTitle.FontSize = largeFontSize; 
                 textBlock1.FontSize = mediumFontSize; 
-                textBlock2.FontSize = smallFontSize; 
-                BackgroundColorButton.FontSize = mediumFontSize;
-                TextColorButton.FontSize = mediumFontSize;
+                textBlock2.FontSize = smallFontSize;
+                button1.FontSize = mediumFontSize;
+                button2.FontSize = mediumFontSize;
                 checkBox1.FontSize = mediumFontSize;
 
                 if (mediumFontSize < 23)
                 {
-                    BackgroundColorButton.Height = mediumFontSize * 4;
-                    TextColorButton.Height = mediumFontSize * 4;
+                    button1.Height = mediumFontSize * 4;
+                    button2.Height = mediumFontSize * 4;
                     checkBox1.Height = mediumFontSize * 4;
 
                 }
                 else if (mediumFontSize < 30)
                 {
-                    BackgroundColorButton.Height = mediumFontSize * 3;
-                    TextColorButton.Height = mediumFontSize * 3;
+                    button1.Height = mediumFontSize * 3;
+                    button2.Height = mediumFontSize * 3;
                     checkBox1.Height = mediumFontSize * 3;
                 }
                 else
                 {
-                    BackgroundColorButton.Height = mediumFontSize * 2.5;
-                    TextColorButton.Height = mediumFontSize * 2.5;
+                    button1.Height = mediumFontSize * 2.5;
+                    button2.Height = mediumFontSize * 2.5;
                     checkBox1.Height = mediumFontSize * 2.5;
                 }
             }
         }
-
-        private void DigitalEyes_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        /*Needed to calculate the values to set the color for the font and background, calculates
+         a color from a hex color string*/
         private SolidColorBrush GetColorFromHex(string myColor)
         {
             return new SolidColorBrush(
@@ -181,7 +183,9 @@ namespace DigitalEyes
                 )
             );
         }
+        private void DigitalEyes_Loaded(object sender, RoutedEventArgs e)
+        {
 
-       
+        }
     }
 }

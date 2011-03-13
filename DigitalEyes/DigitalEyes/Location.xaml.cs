@@ -13,18 +13,23 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Xna.Framework.Audio;
 using System.IO;
+using Microsoft.Phone.Tasks;
 
 namespace DigitalEyes
 {
     public partial class Location : PhoneApplicationPage
     {
+        CameraCaptureTask cameraCaptureTask1;
+        PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
+
         public Location()
         {
             InitializeComponent();
         }
-/****************************CHANGE FONT SIZE DYNAMICALLY ****************************************/
-        PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
 
+        /*When the location page is navigated to the application will fetch the lcoation that the user typed into 
+         * the destination textbox from the dictionary and use it to calculate directions as well as displaying it as
+         * the page title*/
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             object LocationObject;
@@ -34,7 +39,6 @@ namespace DigitalEyes
                 if (phoneAppService.State.TryGetValue("Location", out LocationObject))
                 {
                     PageTitle.Text = LocationObject.ToString();
-                    
                 }
             }
             else
@@ -42,24 +46,24 @@ namespace DigitalEyes
                 PageTitle.Text = "No Location Specified";
             }
             base.OnNavigatedTo(e);
-            
-
-
         }
 
+        /*Load and apply the saved values for the font size, background color, and font color*/
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
             object FontSizeObject;
             object BGC;
             object FC;
+
+            /*Set font size on page, large font objects*/
             if (phoneAppService.State.ContainsKey("LargeFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("LargeFontSize", out FontSizeObject))
                 {
                     double largeFontSize = Convert.ToDouble(FontSizeObject);
-
                 }
             }
+            /*Set font size on page, medium font objects*/
             if (phoneAppService.State.ContainsKey("MediumFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("MediumFontSize", out FontSizeObject))
@@ -67,34 +71,51 @@ namespace DigitalEyes
                     double mediumFontSize = Convert.ToDouble(FontSizeObject);
 
                     PageTitle.FontSize = mediumFontSize;
-                    textBlock1.FontSize = mediumFontSize;
-                    textBlock2.FontSize = mediumFontSize;
-                    textBlock3.FontSize = mediumFontSize;
-                    textBlock4.FontSize = mediumFontSize;
+                    
                     button1.FontSize = mediumFontSize;
-
-   
-
+                    button2.FontSize = mediumFontSize;
+                    /*Ensures that buttons resize appropriately, changes the height of button along with the fontSize
+                   * so that the font will fit inside the button box*/
+                    if (mediumFontSize < 23)
+                    {
+                        button1.Height = mediumFontSize * 4;
+                        button2.Height = mediumFontSize * 4;
+                    }
+                    else if (mediumFontSize < 30)
+                    {
+                        button1.Height = mediumFontSize * 3;
+                        button2.Height = mediumFontSize * 3;
+                    }
+                    else
+                    {
+                        button1.Height = mediumFontSize * 2.5;
+                        button2.Height = mediumFontSize * 2.5;
+                    }
                 }
             }
+            /*Set font size on page, small font objects*/
             if (phoneAppService.State.ContainsKey("SmallFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("SmallFontSize", out FontSizeObject))
                 {
                     double smallFontSize = Convert.ToDouble(FontSizeObject);
                     ApplicationTitle.FontSize = smallFontSize;
-
+                    textBlock1.FontSize = smallFontSize;
+                    textBlock2.FontSize = smallFontSize;
+                    textBlock3.FontSize = smallFontSize;
+                    textBlock4.FontSize = smallFontSize;
                 }
             }
+            /*Set the background color of the page*/
             if (phoneAppService.State.ContainsKey("BackgroundColor"))
             {
                 if (phoneAppService.State.TryGetValue("BackgroundColor", out BGC))
                 {
                     string col = Convert.ToString(BGC);
                     LayoutRoot.Background = new SolidColorBrush(GetColorFromHex(col).Color);
-                    
                 }
             }
+            /*Set the font color of all text on the page*/
             if (phoneAppService.State.ContainsKey("FontColor"))
             {
                 if (phoneAppService.State.TryGetValue("FontColor", out FC))
@@ -107,11 +128,12 @@ namespace DigitalEyes
                     textBlock3.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
                     textBlock4.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
                     button1.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
+                    button2.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
                 }
             }
-
         }
-/**********************************END CHANGE FONT SIZE DYNAMICALLY ******************************/
+        /*Needed to calculate the values to set the color for the font and background, calculates
+         a color from a hex color string*/
         private SolidColorBrush GetColorFromHex(string myColor)
         {
             return new SolidColorBrush(
@@ -123,12 +145,42 @@ namespace DigitalEyes
                 )
             );
         }
-
+        /*Relaunch the camera, then navigate to the scan page to scan an intermediary tag. This is usefull if the
+         * user has become confused about their current location en route to their destination, or simply wants more information
+         * about the locations they are passing. They can scan another tag, receive information about that tag, then the app will
+         * recalculate directions to their destination from the new current location*/
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Scan.xaml", UriKind.RelativeOrAbsolute));
+            cameraCaptureTask1 = new CameraCaptureTask();
+            cameraCaptureTask1.Completed += new EventHandler<PhotoResult>(cameraCaptureTask_Completed);
+            try
+            {
+                cameraCaptureTask1.Show();
+            }
+            catch (System.InvalidOperationException ex)
+            {
+                //do nothing
+            }
         }
+        /*Camera picture has been taken successfully, proceed to scan screen*/
+        void cameraCaptureTask_Completed(object sender, PhotoResult e)
+        {
+            changeScreen();
+            //don't need for now but this is where we will store the photo to memory 
+        }
+        /*Navigate to the scan page, which will show the results of the scanned tag after the camera has 
+         * finished and the tag references have been loaded*/
+        void changeScreen()
+        {
+            NavigationService.Navigate(new Uri("/Scan.xaml", UriKind.RelativeOrAbsolute));
+        }   
 
-       
+        /*Shortcut back to main page of the application in case the user has changed their mind about 
+         * the actions they wish to perform, keeps the user from needing multiple clicks of the phone's
+         * back button*/
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

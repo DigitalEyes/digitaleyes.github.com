@@ -23,32 +23,40 @@ namespace DigitalEyes
             InitializeComponent();
         }
 
-/****************************CHANGE FONT SIZE DYNAMICALLY ****************************************/
         PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
 
+        /*Ensures that the new font color will be reloaded when navigated back to Settings page. Allowing the default
+        value of the back button does not refresh all the values on the page */
+        private void PhoneApplicationPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Settings.xaml", UriKind.Relative));
+        }
+
+        /*Load and apply the saved values for the font size, background color, and font color */
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
             object FontSizeObject;
             object BGC;
             object FC;
+
+            /*Set font size on page, large font objects*/
             if (phoneAppService.State.ContainsKey("LargeFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("LargeFontSize", out FontSizeObject))
                 {
                     double largeFontSize = Convert.ToDouble(FontSizeObject);
-
                     PageTitle.FontSize = largeFontSize;
                 }
             }
+            /*Set font size on page, medium font objects*/
             if (phoneAppService.State.ContainsKey("MediumFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("MediumFontSize", out FontSizeObject))
                 {
                     double mediumFontSize = Convert.ToDouble(FontSizeObject);
-
-                    
                 }
             }
+            /*Set font size on page, small font objects*/
             if (phoneAppService.State.ContainsKey("SmallFontSize"))
             {
                 if (phoneAppService.State.TryGetValue("SmallFontSize", out FontSizeObject))
@@ -57,16 +65,16 @@ namespace DigitalEyes
                     ApplicationTitle.FontSize = smallFontSize;
                 }
             }
+            /*Set the background color of the page*/
             if (phoneAppService.State.ContainsKey("BackgroundColor"))
             {
                 if (phoneAppService.State.TryGetValue("BackgroundColor", out BGC))
                 {
                     string col = Convert.ToString(BGC);
                     LayoutRoot.Background = new SolidColorBrush(GetColorFromHex(col).Color);
-
-
                 }
             }
+            /*Set the font color of the page*/
             if (phoneAppService.State.ContainsKey("FontColor"))
             {
                 if (phoneAppService.State.TryGetValue("FontColor", out FC))
@@ -74,14 +82,12 @@ namespace DigitalEyes
                     string col = Convert.ToString(FC);
                     ApplicationTitle.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
                     PageTitle.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-
                 }
             }
-
-
         }
-/**********************************END CHANGE FONT SIZE DYNAMICALLY ******************************/
 
+        /*Background color picker, color picker will save the selected values for future page loads and
+         will also set the font color of the objects on the page to the new color immediately*/
         private void b_red1_Click(object sender, RoutedEventArgs e)
         {
             PageTitle.Foreground = new SolidColorBrush(GetColorFromHex("#FF780000").Color);
@@ -202,6 +208,10 @@ namespace DigitalEyes
             ApplicationTitle.Foreground = new SolidColorBrush(Colors.Black);
             phoneAppService.State["FontColor"] = Colors.Black;
         }
+        /*End font color picker*/
+
+        /*Calculate the color value from an input hex color string so that the input for a new 
+         * SolidColorBrush is in the appropriate format*/
         private SolidColorBrush GetColorFromHex(string myColor)
         {
             return new SolidColorBrush(
@@ -213,9 +223,5 @@ namespace DigitalEyes
                 )
             );
         }
-
-       
-        
-        
     }
 }
