@@ -67,6 +67,9 @@
     <Compile Include="Directions.xaml.cs">
       <DependentUpon>Directions.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Elevator.xaml.cs">
+      <DependentUpon>Elevator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FontColor.xaml.cs">
       <DependentUpon>FontColor.xaml</DependentUpon>
     </Compile>
@@ -76,12 +79,18 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SEC3437.xaml.cs">
+      <DependentUpon>SEC3437.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scan.xaml.cs">
       <DependentUpon>Scan.xaml</DependentUpon>
     </Compile>
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WomensBathroom.xaml.cs">
+      <DependentUpon>WomensBathroom.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +106,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Elevator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FontColor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -109,11 +122,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SEC3437.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WomensBathroom.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,6 +150,9 @@
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Women%27s bathroom.png" />
+    <Resource Include="SEC3437.png" />
+    <Resource Include="Elevator on 3rd floor.png" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
