@@ -28,7 +28,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBlock Name="Info" Text="This is the third floor elevator. It has access to floors one through four. The fourth floor is an attic and should be avoided." TextAlignment="Center" TextWrapping="Wrap" Margin="92,0,100,0" />
-            <Button Content="Directions" Height="78" HorizontalAlignment="Left" Margin="9,286,0,0" Name="Directions" VerticalAlignment="Top" Width="441" Click="Directions_Click" />
+            <Button Content="Directions" Height="78" HorizontalAlignment="Center" Margin="0,405,0,0" Name="Directions" VerticalAlignment="Top" Width="441" Click="Directions_Click" />
         </Grid>
     </Grid>
  

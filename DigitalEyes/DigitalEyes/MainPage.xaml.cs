@@ -18,6 +18,7 @@ using System.IO;
 
 namespace DigitalEyes
 {
+    
     public partial class MainPage : PhoneApplicationPage
     {
         CameraCaptureTask cameraCaptureTask1;
