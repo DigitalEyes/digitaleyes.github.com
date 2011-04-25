@@ -34,19 +34,19 @@
                     <ImageBrush ImageSource="SEC3437.png"/>
                 </Button.Background>    
             </Button>
-            <Button Content="SEC 3437" HorizontalAlignment="Left" Margin="40,115,0,420" Name="Third_floor_women_bathroom" Width="160" />
+            <Button Content="SEC 3437" HorizontalAlignment="Left" Margin="40,115,0,420" Name="Third_floor_women_bathroom" Width="160" Click="SEC3437_Click"/>
             <Button Height="98" Width="100" HorizontalAlignment="Left" Margin="280,38,0,0" Name="Womens_Bathroom" VerticalAlignment="Top" Click="WomensBathroom_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Women's Bathroom.png"/>
                 </Button.Background>
             </Button>
-            <Button Content="W Bathroom" Height="72" HorizontalAlignment="Left" Margin="230,115,0,0" Name="title_w_bathroom" VerticalAlignment="Top" Width="200" />
+            <Button Content="W Bathroom" Height="72" HorizontalAlignment="Left" Margin="230,115,0,0" Name="title_w_bathroom" VerticalAlignment="Top" Width="200" Click="WomensBathroom_Click"/>
             <Button Height="98" Width="100" HorizontalAlignment="Left" Margin="70,200,0,0" Name="Third_floor_elevator" VerticalAlignment="Top" Click="Elevator_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Elevator on 3rd floor.png"/>
                 </Button.Background>
             </Button>
-            <Button Content="Elevator" Height="72" HorizontalAlignment="Left" Margin="40,280,0,0" Name="title_third_elevator" VerticalAlignment="Top" Width="160" />
+            <Button Content="Elevator" Height="72" HorizontalAlignment="Left" Margin="40,280,0,0" Name="title_third_elevator" VerticalAlignment="Top" Width="160" Click="Elevator_Click"/>
         </Grid>
     </Grid>
  

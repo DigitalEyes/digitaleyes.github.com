@@ -17,6 +17,7 @@ namespace DigitalEyes
 {
     public partial class App : Application
     {
+        
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>
@@ -56,12 +57,14 @@ namespace DigitalEyes
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+             
         }
 
         // Code to execute when the application is activated (brought to foreground)
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+           
         }
 
         // Code to execute when the application is deactivated (sent to background)

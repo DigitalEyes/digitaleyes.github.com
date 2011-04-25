@@ -22,7 +22,7 @@ namespace DigitalEyes
 
         private void Directions_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Directions.xaml", UriKind.RelativeOrAbsolute));
+           NavigationService.Navigate(new Uri("/Directions.xaml", UriKind.Relative));
         }
     }
 }

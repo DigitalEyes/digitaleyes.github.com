@@ -19,5 +19,15 @@ namespace DigitalEyes
         {
             InitializeComponent();
         }
+
+        private void DirectionsButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Directions.xaml",UriKind.RelativeOrAbsolute));
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

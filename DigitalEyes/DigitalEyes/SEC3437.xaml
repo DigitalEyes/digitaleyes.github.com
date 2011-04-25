@@ -27,7 +27,8 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Name="Info" Margin ="87,14,96,13" Text="SEC 3437 is a classroom used for CS and ECE classes. The setup of the room is traditional with the attached chair/desk combination." TextAlignment="Center" TextWrapping="Wrap" />
+            <TextBlock Name="Info" Margin ="87,31,96,13" Text="SEC 3437 is a classroom used for CS and ECE classes. The setup of the room is traditional with the attached chair/desk combination." TextAlignment="Center" TextWrapping="Wrap" />
+            <Button Content="Directions" Height="72" HorizontalAlignment="Left" Margin="6,459,0,0" Name="DirectionsButton" VerticalAlignment="Top" Width="441" Click="DirectionsButton_Click" />
         </Grid>
     </Grid>
  
