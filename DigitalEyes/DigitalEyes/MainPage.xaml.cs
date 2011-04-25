@@ -18,7 +18,13 @@ using System.IO;
 
 namespace DigitalEyes
 {
-    
+    public static class ConfigClass
+    {
+        public static Tag tag1, tag2, tag3;
+        
+           
+        public static Tag current = null;
+    }
     public partial class MainPage : PhoneApplicationPage
     {
         CameraCaptureTask cameraCaptureTask1;
@@ -28,11 +34,27 @@ namespace DigitalEyes
         public MainPage()
         {
             InitializeComponent();
-           
         }
+        
         /*Load and apply the saved values for the font size, background color, and font color */
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
+            ConfigClass.tag1 = new Tag("SEC3437");
+            ConfigClass.tag1.pathNext = "Take a right out of the classroom and continue for approximately 20 feet. ";
+            ConfigClass.tag1.contDirNext = "continue on approximately 20 feet. ";
+            ConfigClass.tag1.type = "SEC3437";
+            ConfigClass.tag1.content = "SEC 3437 is a classroom used for CS and ECE classes. The setup of the room is traditional with the attached chair/desk combination. ";
+            ConfigClass.tag2 = new Tag("Elevator");
+            ConfigClass.tag2.pathNext = "From stepping out of the elevator turn right and walk approximately 5 feet. ";
+            ConfigClass.tag2.pathLast = "Turn left out of the elevator and walk approximately twenty feet. ";
+            ConfigClass.tag2.contDirNext = "Continue on approximately 5 feet. ";
+            ConfigClass.tag2.contDirLast = "Continue on approximately 20 feet. ";
+            ConfigClass.tag2.type = "Elevator";
+            ConfigClass.tag3 = new Tag("Women's Bathroom");
+            ConfigClass.tag3.pathLast = "Turn left out of the bathroom and continue down the hallway for approximately five feet. ";
+            ConfigClass.tag3.contDirLast = "continue on approximately 5 feet. ";
+            ConfigClass.tag3.type = "bathroom";
+
             object FontSizeObject;
             object BGC;
             object FC;

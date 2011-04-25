@@ -28,11 +28,8 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Height="61" HorizontalAlignment="Left" Margin="12,20,0,0" Name="textBlock1" Text="Current Location: Rm 3437" VerticalAlignment="Top" Width="438" TextWrapping="Wrap" />
-            <TextBlock Height="87" HorizontalAlignment="Left" Margin="12,87,0,0" Name="textBlock2" Text="1. From facing the tag, turn left and walk down the hallway." VerticalAlignment="Top" Width="438" TextWrapping="Wrap" />
-            <TextBlock Height="87" HorizontalAlignment="Left" Margin="9,163,0,0" Name="textBlock3" Text="2. Continue straight for 50 meters. Pass the elevator.  " VerticalAlignment="Top" Width="438" TextWrapping="Wrap" />
-            <TextBlock Height="87" HorizontalAlignment="Left" Margin="9,243,0,0" Name="textBlock4" Text="3. Destination is on right." VerticalAlignment="Top" Width="438" TextWrapping="Wrap" />
-            <Button Content="Scan Intermediate Location" Height="72" HorizontalAlignment="Left" Margin="12,333,0,0" Name="button1" VerticalAlignment="Top" Width="435" Click="button1_Click" />
+            <TextBlock Height="162" HorizontalAlignment="Left" Margin="12,20,0,0" Name="textBlock1" Text="" VerticalAlignment="Top" Width="438" TextWrapping="Wrap" />
+            <TextBlock Height="339" HorizontalAlignment="Left" Margin="12,87,0,0" Name="textBlock2" Text="" VerticalAlignment="Top" Width="438" TextWrapping="Wrap" />
             <Button Content="Return to Main" Height="72" HorizontalAlignment="Left" Margin="12,432,0,0" Name="button2" VerticalAlignment="Top" Width="435" Click="button2_Click" />
         </Grid>
     </Grid>

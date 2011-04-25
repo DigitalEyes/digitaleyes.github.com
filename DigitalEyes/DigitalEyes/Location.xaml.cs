@@ -38,7 +38,56 @@ namespace DigitalEyes
             {
                 if (phoneAppService.State.TryGetValue("Location", out LocationObject))
                 {
-                    PageTitle.Text = LocationObject.ToString();
+                    PageTitle.Text = "Directions to " + LocationObject.ToString();
+                    try { textBlock1.Text = "Current location " + ConfigClass.current.name; }
+                    catch { }
+                    if ((LocationObject.ToString().Equals("restroom")) ||
+                        (LocationObject.ToString().Equals("bathroom")))
+                    {
+                        if (ConfigClass.current.type.Equals("restroom") ||
+                            ConfigClass.current.type.Equals("bathroom"))
+                            textBlock1.Text = "Last scanned tag was a bathroom. You are at your destination or should scan a nearby tag.";
+                        else if (ConfigClass.current.name.Equals("SEC3437"))
+                        {
+                            textBlock1.Text = ConfigClass.tag1.pathNext + ConfigClass.tag2.contDirNext;
+                        }
+                        else if (ConfigClass.current.name.Equals("Elevator")){
+                            textBlock1.Text = ConfigClass.tag2.pathNext;
+                        }
+                    }
+                    else if (LocationObject.ToString().Equals("SEC3437"))
+                    {
+                        if (ConfigClass.current.type.Equals("restroom") ||
+                            ConfigClass.current.type.Equals("bathroom"))
+                        {
+                            textBlock1.Text = ConfigClass.tag3.pathLast + ConfigClass.tag2.contDirLast;
+                        }
+                        else if (ConfigClass.current.type.Equals("Elevator")){
+                            textBlock1.Text = ConfigClass.tag2.pathLast;
+                        }
+                        else if (ConfigClass.current.name.Equals("SEC3437")){
+                             textBlock1.Text = "Last scanned tag was SEC3437. You are at your destination or should scan a nearby tag.";
+                        }
+                    }
+                    else if ((LocationObject.ToString().Equals("Elevator")) || 
+                            (LocationObject.ToString().Equals("elevator")))
+                    {
+                        if (ConfigClass.current.type.Equals("restroom") ||
+                            ConfigClass.current.type.Equals("bathroom"))
+                        {
+                            textBlock1.Text = ConfigClass.tag3.pathLast;
+                        }
+                        else if (ConfigClass.current.type.Equals("Elevator")){
+                            textBlock1.Text = "Last scanned tag was an elevator. You are at your destination or should scan a nearby tag.";
+                        }
+                        else if (ConfigClass.current.name.Equals("SEC3437")){
+                             textBlock1.Text = ConfigClass.tag1.pathNext;
+                        }
+                    }
+                    else
+                    {
+                        textBlock2.Text = "Unknown location.";
+                    }
                 }
             }
             else
@@ -72,23 +121,19 @@ namespace DigitalEyes
 
                     PageTitle.FontSize = mediumFontSize;
                     
-                    button1.FontSize = mediumFontSize;
                     button2.FontSize = mediumFontSize;
                     /*Ensures that buttons resize appropriately, changes the height of button along with the fontSize
                    * so that the font will fit inside the button box*/
                     if (mediumFontSize < 23)
                     {
-                        button1.Height = mediumFontSize * 4;
                         button2.Height = mediumFontSize * 4;
                     }
                     else if (mediumFontSize < 30)
                     {
-                        button1.Height = mediumFontSize * 3;
                         button2.Height = mediumFontSize * 3;
                     }
                     else
                     {
-                        button1.Height = mediumFontSize * 2.5;
                         button2.Height = mediumFontSize * 2.5;
                     }
                 }
@@ -102,8 +147,6 @@ namespace DigitalEyes
                     ApplicationTitle.FontSize = smallFontSize;
                     textBlock1.FontSize = smallFontSize;
                     textBlock2.FontSize = smallFontSize;
-                    textBlock3.FontSize = smallFontSize;
-                    textBlock4.FontSize = smallFontSize;
                 }
             }
             /*Set the background color of the page*/
@@ -125,9 +168,6 @@ namespace DigitalEyes
                     PageTitle.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
                     textBlock1.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
                     textBlock2.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    textBlock3.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    textBlock4.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
-                    button1.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
                     button2.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
                 }
             }

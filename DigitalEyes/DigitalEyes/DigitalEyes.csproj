@@ -64,6 +64,7 @@
     <Compile Include="BackgroundColor.xaml.cs">
       <DependentUpon>BackgroundColor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Tag.cs" />
     <Compile Include="Directions.xaml.cs">
       <DependentUpon>Directions.xaml</DependentUpon>
     </Compile>

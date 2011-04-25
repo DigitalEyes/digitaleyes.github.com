@@ -20,14 +20,15 @@ namespace DigitalEyes
     public partial class Scan : PhoneApplicationPage
     {
         PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
-
+        
         public Scan()
         {
             InitializeComponent();
             /*This is the hardcoded sample result of a tag scan. The tag will return a string which will be referenced 
              * with a location in our data structure and will return information about the location*/
-            //textBlock1.Text = "This is room 3437. Multiple Computer Science and Chemical Engineering classes meet here.  It is a traditional classroom setup with chairs attached to the desks.  There are no stairs inside this room.";
+            
         }
+
         /*Load and apply the saved values for the font size, background color, and font color */
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
@@ -106,6 +107,7 @@ namespace DigitalEyes
                     //textBlock1.Foreground = new SolidColorBrush(GetColorFromHex(col).Color);
                 }
             }
+            
         }
         /*Needed to calculate the values to set the color for the font and background, calculates
          a color from a hex color string*/
@@ -120,12 +122,6 @@ namespace DigitalEyes
                 )
             );
         }
-        /*Navigate to the directions page to generate directions using the tag loaded in the current page, which
-         * was just scanned as the starting location for the route generated*/
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Directions.xaml", UriKind.RelativeOrAbsolute));
-        }
         /*Shortcut to return to the main page of the application to avoid having to click the back button on the
          * phone multiple times. */
         private void button2_Click(object sender, RoutedEventArgs e)
@@ -135,14 +131,17 @@ namespace DigitalEyes
 
         private void SEC3437_Click(object sender, RoutedEventArgs e)
         {
+            ConfigClass.current = ConfigClass.tag1;
             NavigationService.Navigate(new Uri("/SEC3437.xaml", UriKind.RelativeOrAbsolute));
         }
         private void WomensBathroom_Click(object sender, RoutedEventArgs e)
         {
+            ConfigClass.current = ConfigClass.tag3; 
             NavigationService.Navigate(new Uri("/WomensBathroom.xaml", UriKind.RelativeOrAbsolute));
         }
         private void Elevator_Click(object sender, RoutedEventArgs e)
         {
+            ConfigClass.current = ConfigClass.tag2;
             NavigationService.Navigate(new Uri("/Elevator.xaml", UriKind.RelativeOrAbsolute));
         }
     }
